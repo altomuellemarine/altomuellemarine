@@ -1,27 +1,32 @@
-# AltoMuelle
+# Alto Muelle Marine
 
-Primera version estatica del sitio de AltoMuelle, preparada para Cloudflare Pages.
+Sitio estatico listo para Cloudflare Pages.
 
-## Editar contenido
+## Enfoque comercial
 
-- Reemplaza todos los textos marcados como `[BORRADOR]`.
-- Cambia el correo, WhatsApp, direccion, horarios y redes sociales por datos reales.
-- Agrega logo y fotos reales cuando esten disponibles.
+Alto Muelle Marine ayuda a clientes chilenos a encontrar, evaluar, comprar e importar embarcaciones desde Estados Unidos a Chile.
+
+Servicios principales:
+
+- Asesoria General de Importacion.
+- Busqueda Personalizada USA de 15 dias.
+- Compra asistida, inspeccion, negociacion, exportacion, importacion y entrega final.
+
+El inventario usado en Chile funciona como vitrina complementaria y prueba de experiencia; no es el foco principal del negocio.
 
 ## Publicar en Cloudflare Pages
 
-1. En Cloudflare, entra a Workers & Pages y crea un nuevo proyecto conectado a este repo.
-2. Usa estos ajustes:
-   - Framework preset: None
-   - Build command: dejar vacio
-   - Output directory: `/`
-3. Agrega el dominio `altomuelle.cl` como dominio personalizado.
-4. Configura `altomuelle.com` para redirigir a `https://altomuelle.cl`.
+1. Publicar el contenido de esta carpeta como sitio estatico.
+2. Framework preset: None.
+3. Build command: vacio.
+4. Output directory: `/`.
+5. Configurar `altomuelle.cl` como dominio personalizado.
 
-## Archivos incluidos
+## Archivos clave
 
-- `index.html`: pagina principal.
-- `styles.css`: estilos responsive.
-- `script.js`: menu fijo, animaciones suaves y galeria ligera.
-- `robots.txt`, `sitemap.xml`, `llms.txt`: base para SEO y visibilidad.
-- `_redirects`: redirecciones para Cloudflare.
+- `index.html`: sitio principal.
+- `styles.css`: estilos del sitio.
+- `script.js`: filtros, ordenamiento y galeria.
+- `sea-ray-gallery/`: fotos actuales de la Sea Ray SPX 190 2023.
+- `robots.txt`, `sitemap.xml`, `llms.txt`: archivos de descubrimiento.
+- `_redirects`: fallback para Cloudflare Pages.

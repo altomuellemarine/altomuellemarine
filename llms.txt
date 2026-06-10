@@ -1,0 +1,23 @@
+# Alto Muelle Marine
+
+Alto Muelle Marine es una empresa chilena enfocada en busqueda, evaluacion, compra asistida e importacion de embarcaciones desde Estados Unidos a Chile.
+
+## Servicios principales
+
+- Asesoria General de Importacion: costos, impuestos, tiempos, documentacion y viabilidad.
+- Busqueda Personalizada USA: busqueda de 15 dias segun presupuesto y necesidades.
+- Compra asistida: contacto con vendedores americanos, solicitud de fotos y videos, inspeccion presencial, negociacion, exportacion, importacion y entrega final.
+
+## Paginas clave
+
+- Inicio: https://altomuelle.cl/
+- Asesorias: https://altomuelle.cl/#asesorias
+- Proceso: https://altomuelle.cl/#proceso
+- Casos reales: https://altomuelle.cl/#casos
+- Inventario usado en Chile: https://altomuelle.cl/#inventario
+
+## Contacto y pagos
+
+- WhatsApp: +56 9 3105 4089
+- Asesoria General: https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00
+- Busqueda Personalizada USA: https://buy.stripe.com/5kQ8wP3g61sv5jsafNdby01
