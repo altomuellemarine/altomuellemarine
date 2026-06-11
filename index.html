@@ -3,39 +3,2052 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alto Muelle Marine | Importacion de embarcaciones USA a Chile</title>
-  <meta name="description" content="Ayudamos a clientes chilenos a encontrar, evaluar, comprar e importar embarcaciones desde Estados Unidos a Chile.">
-  <link rel="canonical" href="https://altomuelle.cl/">
+  <title>Alto Muelle Marine | Importación de embarcaciones USA a Chile</title>
+  <meta name="description" content="Ayudamos a clientes chilenos a encontrar, evaluar, comprar e importar embarcaciones desde Estados Unidos a Chile con búsqueda personalizada, inspección y compra asistida.">
+  <link rel="canonical" href="https://altomuellemarine.com/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_CL">
-  <meta property="og:title" content="Alto Muelle Marine | Importacion de embarcaciones USA a Chile">
-  <meta property="og:description" content="Busqueda en Boat Trader, YachtWorld, Facebook Marketplace, dealers y brokers. Compra asistida, inspeccion, exportacion e importacion a Chile.">
-  <meta property="og:url" content="https://altomuelle.cl/">
-  <link rel="stylesheet" href="styles.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Alto Muelle Marine","url":"https://altomuelle.cl/","areaServed":["Chile","United States"],"telephone":"+56931054089","description":"Asesoria, busqueda personalizada, compra asistida e importacion de embarcaciones desde Estados Unidos a Chile."}</script>
+  <meta property="og:title" content="Alto Muelle Marine | Importación de embarcaciones USA a Chile">
+  <meta property="og:description" content="Búsqueda en Boat Trader, YachtWorld, Facebook Marketplace, dealers y brokers. Compra asistida, inspección, exportación e importación a Chile.">
+  <meta property="og:url" content="https://altomuellemarine.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Alto Muelle Marine",
+      "url": "https://altomuellemarine.com/",
+      "areaServed": ["Chile", "United States"],
+      "telephone": "+56931054089",
+      "description": "Asesoría, búsqueda personalizada, compra asistida e importación de embarcaciones desde Estados Unidos a Chile.",
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "name": "Asesoría General de Importación",
+          "url": "https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00"
+        },
+        {
+          "@type": "Offer",
+          "name": "Búsqueda Personalizada USA",
+          "url": "https://buy.stripe.com/5kQ8wP3g61sv5jsafNdby01"
+        }
+      ]
+    }
+  </script>
+  <style>
+    :root {
+      --navy: #071824;
+      --blue: #0b6fae;
+      --teal: #0f9a9a;
+      --gold: #c99b45;
+      --ink: #10202b;
+      --muted: #5d6b76;
+      --line: #d8e1e7;
+      --paper: #f6f8f7;
+      --white: #fff;
+      --soft: #eef4f5;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.5;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      color: var(--navy);
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .nav-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .nav-actions a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .nav-link { color: var(--blue); }
+
+    .btn {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      padding: 12px 16px;
+      border: 0;
+      text-decoration: none;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .btn-primary { background: var(--gold); color: #101820; }
+    .btn-dark { background: var(--navy); color: #fff; }
+    .btn-light { background: #fff; color: var(--navy); }
+    .btn-ghost { border: 1px solid rgba(255,255,255,.72); color: #fff; }
+    .btn-teal { background: var(--teal); color: #fff; }
+    .btn-outline { border: 1px solid var(--line); background: #fff; color: var(--navy); }
+
+    .hero {
+      min-height: 610px;
+      display: flex;
+      align-items: center;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(7,24,36,.93), rgba(7,24,36,.68), rgba(7,24,36,.18)),
+        url("assets/Hero/Regal.jpeg") center / cover;
+    }
+
+    .hero-content {
+      max-width: 740px;
+      padding: 64px 0;
+    }
+
+    .eyebrow {
+      margin-bottom: 16px;
+      color: #aee7e6;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 7vw, 74px);
+      line-height: .98;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 660px;
+      margin: 22px 0 0;
+      color: #eaf6f5;
+      font-size: 20px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .hero-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .proof-pill {
+      padding: 8px 10px;
+      border: 1px solid rgba(255,255,255,.26);
+      border-radius: 999px;
+      color: #d8eeec;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    section { padding: 70px 0; }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .section-head h2 {
+      max-width: 620px;
+      margin: 0;
+      color: var(--navy);
+      font-size: 34px;
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      max-width: 560px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .service {
+      min-height: 150px;
+      padding: 22px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .service b {
+      display: block;
+      margin-bottom: 9px;
+      color: var(--navy);
+      font-size: 17px;
+    }
+
+    .service p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .service-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .service-actions .btn {
+      min-height: 40px;
+      padding: 9px 12px;
+      font-size: 13px;
+    }
+
+    .founder {
+      background: #fff;
+      border-top: 1px solid var(--line);
+    }
+
+    .founder-card {
+      display: grid;
+      grid-template-columns: 310px minmax(0, 1fr);
+      gap: 28px;
+      align-items: center;
+      padding: 18px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .founder-photo {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      border-radius: 7px;
+      background: var(--navy);
+    }
+
+    .founder-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .founder-copy .eyebrow {
+      margin-bottom: 10px;
+      color: var(--teal);
+    }
+
+    .founder-copy h2 {
+      max-width: 680px;
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 32px;
+      line-height: 1.1;
+    }
+
+    .founder-copy p {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .founder-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin: 18px 0;
+    }
+
+    .founder-points span {
+      padding: 10px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .founder-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .import-flow {
+      background: #fff;
+      border-top: 1px solid var(--line);
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .flow-step {
+      min-height: 154px;
+      padding: 18px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .flow-step span {
+      display: inline-flex;
+      width: 30px;
+      height: 30px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      border-radius: 999px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .flow-step b {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--navy);
+    }
+
+    .flow-step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cases {
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .legacy-case-grid {
+      display: none;
+    }
+
+    .case-lead,
+    .case-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 12px 26px rgba(7,24,36,.05);
+    }
+
+    .case-lead {
+      padding: 26px;
+    }
+
+    .case-lead h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 25px;
+      line-height: 1.12;
+    }
+
+    .case-lead p {
+      margin: 0 0 20px;
+      color: var(--muted);
+    }
+
+    .process-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .process-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--ink);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .process-list span {
+      display: inline-flex;
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .case-cards {
+      display: grid;
+      gap: 12px;
+    }
+
+    .case-card {
+      padding: 20px;
+    }
+
+    .case-card b {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--navy);
+      font-size: 17px;
+    }
+
+    .case-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .case-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .case-proof span {
+      padding: 6px 8px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .real-case-card {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+      overflow: hidden;
+      padding: 12px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 12px 26px rgba(7,24,36,.06);
+    }
+
+    .real-case-card + .real-case-card {
+      margin-top: 16px;
+    }
+
+    .case-gallery {
+      align-self: start;
+      background: var(--navy);
+      padding: 0;
+      border-radius: 7px;
+      overflow: hidden;
+    }
+
+    .case-photo {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      border-radius: 6px;
+      background: #020b11;
+    }
+
+    .case-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      cursor: zoom-in;
+    }
+
+    .case-body {
+      padding: 12px 4px;
+    }
+
+    .case-kicker {
+      margin-bottom: 10px;
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .case-body h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 24px;
+      line-height: 1.08;
+    }
+
+    .case-body p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .case-specs {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .case-spec {
+      min-height: 54px;
+      padding: 8px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+
+    .case-spec span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .case-spec b {
+      display: block;
+      margin-top: 2px;
+      color: var(--ink);
+      font-size: 12px;
+      line-height: 1.25;
+    }
+
+    .case-actions {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .inventory {
+      background: #fff;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .market-layout {
+      display: grid;
+      grid-template-columns: 250px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .market-layout > * {
+      min-width: 0;
+    }
+
+    .filters {
+      position: sticky;
+      top: 88px;
+      padding: 18px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .filters h3 {
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: 18px;
+    }
+
+    .filter-group {
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .filter-group:first-of-type { border-top: 0; padding-top: 0; }
+
+    .filter-group b {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .filter-group label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 8px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .filter-group input {
+      accent-color: var(--blue);
+    }
+
+    .filter-note,
+    .empty-state {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .empty-state {
+      display: none;
+      padding: 24px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-weight: 800;
+    }
+
+    .empty-state.is-visible { display: block; }
+    .listing.is-hidden { display: none; }
+
+    .results-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+      padding: 14px 16px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .results-bar strong { color: var(--navy); }
+
+    .sort {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .sort select {
+      height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .listings {
+      display: grid;
+      gap: 14px;
+    }
+
+    .listing {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr) 190px;
+      gap: 18px;
+      overflow: hidden;
+      padding: 12px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 12px 26px rgba(7,24,36,.06);
+    }
+
+    .listing.featured { border-color: rgba(201,155,69,.76); }
+
+    .gallery {
+      padding: 0;
+      background: #071824;
+      border-radius: 7px;
+      overflow: hidden;
+    }
+
+    .main-photo {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      background: #020b11;
+      overflow: hidden;
+    }
+
+    .main-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      cursor: zoom-in;
+    }
+
+    .photo-placeholder {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 14px;
+      color: #fff;
+      background: linear-gradient(135deg, #0b6fae, #0f9a9a 55%, #c99b45);
+    }
+
+    .photo-placeholder strong {
+      max-width: 160px;
+      font-size: 19px;
+      line-height: 1.08;
+    }
+
+    .badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 2;
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: rgba(7,24,36,.78);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .photo-placeholder .badge {
+      position: static;
+      align-self: flex-start;
+    }
+
+    .thumbs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      padding: 6px;
+    }
+
+    .thumbs-scroll {
+      display: flex;
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+      scrollbar-width: thin;
+    }
+
+    .thumbs button {
+      appearance: none;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      padding: 0;
+      background: transparent;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      cursor: pointer;
+      opacity: .74;
+    }
+
+    .thumbs-scroll button {
+      width: 64px;
+      flex: 0 0 64px;
+    }
+
+    .thumbs button.is-active {
+      border-color: var(--gold);
+      opacity: 1;
+    }
+
+    .thumbs img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .listing-main {
+      min-width: 0;
+      padding: 4px 0;
+    }
+
+    .meta-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .listing h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .listing p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .specs {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .spec {
+      min-height: 58px;
+      padding: 9px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+
+    .spec span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .spec b {
+      display: block;
+      margin-top: 2px;
+      color: var(--ink);
+      font-size: 13px;
+      line-height: 1.25;
+    }
+
+    .listing-side {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 4px 0;
+      text-align: right;
+    }
+
+    .price {
+      color: var(--navy);
+      font-size: 23px;
+      font-weight: 900;
+      line-height: 1.05;
+    }
+
+    .price small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(3, 12, 18, .92);
+    }
+
+    .lightbox.is-open {
+      display: flex;
+    }
+
+    .lightbox-panel {
+      position: relative;
+      width: min(1180px, 100%);
+      max-height: calc(100vh - 48px);
+      display: grid;
+      gap: 12px;
+    }
+
+    .lightbox-stage {
+      position: relative;
+      min-height: 0;
+      height: min(76vh, 760px);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #020b11;
+      border: 1px solid rgba(255,255,255,.14);
+    }
+
+    .lightbox-stage img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+
+    .lightbox-close,
+    .lightbox-nav {
+      position: absolute;
+      z-index: 2;
+      border: 1px solid rgba(255,255,255,.24);
+      background: rgba(7,24,36,.78);
+      color: #fff;
+      cursor: pointer;
+      font-weight: 900;
+    }
+
+    .lightbox-close {
+      top: 12px;
+      right: 12px;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .lightbox-nav {
+      top: 50%;
+      width: 48px;
+      height: 58px;
+      transform: translateY(-50%);
+      border-radius: 6px;
+      font-size: 30px;
+    }
+
+    .lightbox-prev { left: 12px; }
+    .lightbox-next { right: 12px; }
+
+    .lightbox-caption {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .lightbox-caption span:last-child {
+      color: #b9d2d7;
+    }
+
+    .location {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .side-actions {
+      display: grid;
+      width: 100%;
+      gap: 8px;
+    }
+
+    .side-actions .btn {
+      width: 100%;
+      min-height: 42px;
+      padding: 10px 12px;
+      font-size: 13px;
+    }
+
+    .advisor-band {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .advisor-box {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .advisor-box h2 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      line-height: 1.12;
+    }
+
+    .advisor-box p {
+      margin: 0;
+      color: #cfe2e5;
+    }
+
+    footer {
+      padding: 26px 0;
+      color: #697781;
+      font-size: 13px;
+    }
+
+    @media (max-width: 1040px) {
+      .market-layout { grid-template-columns: 1fr; }
+      .filters { position: static; }
+      .filters-inner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+      .filter-group { border-top: 0; padding: 0; }
+      .real-case-card { grid-template-columns: 280px minmax(0, 1fr); }
+      .case-specs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .listing { grid-template-columns: 280px minmax(0, 1fr); }
+      .listing-side {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: end;
+        text-align: left;
+      }
+      .side-actions {
+        width: 320px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      nav { align-items: flex-start; padding: 14px 0; }
+      .hero { min-height: 720px; align-items: end; }
+      .hero-actions .btn { width: 100%; }
+      .section-head,
+      .advisor-box,
+      .founder-card,
+      .real-case-card,
+      .case-grid,
+      .listing,
+      .listing-side,
+      .flow-grid,
+      .services {
+        display: block;
+      }
+      .flow-step,
+      .service + .service {
+        margin-top: 12px;
+      }
+      .founder-photo {
+        margin-bottom: 18px;
+      }
+      .founder-copy h2 {
+        font-size: 26px;
+      }
+      .founder-points {
+        grid-template-columns: 1fr;
+      }
+      .founder-actions .btn {
+        width: 100%;
+      }
+      .case-body {
+        padding: 14px 2px;
+      }
+      .case-body h3 {
+        font-size: 24px;
+      }
+      .case-specs {
+        grid-template-columns: 1fr;
+      }
+      .case-actions .btn {
+        width: 100%;
+      }
+      .section-head p { margin-top: 10px; }
+      .filters-inner { display: block; }
+      .filters,
+      .results-bar,
+      .listing {
+        max-width: 100%;
+        width: 100%;
+      }
+      .results-bar {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .sort {
+        align-items: stretch;
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .sort select { width: 100%; }
+      .listing { padding: 10px; }
+      .listing-main { padding: 14px 2px; }
+      .specs { grid-template-columns: 1fr; }
+      .listing-side { text-align: left; }
+      .side-actions {
+        width: 100%;
+        margin-top: 14px;
+      }
+      .advisor-box .btn { margin-top: 18px; }
+      .lightbox {
+        padding: 12px;
+      }
+      .lightbox-stage {
+        height: 72vh;
+      }
+      .lightbox-nav {
+        width: 42px;
+        height: 52px;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
-  <nav class="wrap"><div class="brand">Alto Muelle Marine</div><div class="nav-actions"><a href="#asesorias">Asesorias</a><a href="#proceso">Proceso</a><a href="#casos">Casos reales</a><a href="#inventario">Inventario</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Reservar</a></div></nav>
-</header>
-<main>
-<section class="hero"><div class="wrap hero-content"><p class="eyebrow">Importacion nautica USA - Chile</p><h1>Importamos embarcaciones desde Estados Unidos a Chile con acompanamiento profesional.</h1><p>Encuentra la embarcacion correcta en Estados Unidos y traela a Chile con respaldo experto en busqueda, contacto con vendedores, inspeccion, negociacion, exportacion e importacion.</p><div class="hero-actions"><a class="btn btn-primary" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Reservar Asesoria General</a><a class="btn btn-light" href="https://buy.stripe.com/5kQ8wP3g61sv5jsafNdby01" target="_blank" rel="noopener">Busqueda Personalizada USA</a><a class="btn btn-ghost" href="#inventario">Ver inventario disponible</a></div><div class="proof"><span>Boat Trader, YachtWorld, dealers y brokers</span><span>Inspeccion presencial y compra asistida</span><span>Exportacion, importacion y entrega final</span></div></div></section>
-<section id="asesorias"><div class="wrap"><div class="section-head"><h2>Las asesorias son la puerta de entrada a una importacion bien ejecutada.</h2><p>Revisamos viabilidad, costos, tiempos, riesgos y oportunidades reales antes de reservar, transferir o viajar.</p></div><div class="services"><article><h3>Asesoria General de Importacion</h3><p>Costos, impuestos, transporte, tiempos, documentacion y viabilidad de importar una embarcacion desde Estados Unidos.</p><a class="btn btn-primary" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Reservar asesoria</a></article><article><h3>Busqueda personalizada USA</h3><p>Servicio de 15 dias para buscar embarcaciones segun presupuesto y necesidad en plataformas, dealers y brokers.</p><a class="btn btn-outline" href="https://buy.stripe.com/5kQ8wP3g61sv5jsafNdby01" target="_blank" rel="noopener">Contratar busqueda</a></article><article><h3>Compra asistida e importacion</h3><p>Contacto con vendedores americanos, solicitud de fotos y videos, inspeccion presencial, negociacion y entrega final.</p><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20evaluar%20la%20importacion%20de%20una%20embarcacion%20desde%20Estados%20Unidos%20a%20Chile." target="_blank" rel="noopener">Hablar por WhatsApp</a></article></div></div></section>
-<section id="proceso" class="import-flow"><div class="wrap"><div class="section-head"><h2>Del mercado americano a tu marina en Chile, con control en cada etapa.</h2><p>Primero validamos la oportunidad; luego coordinamos los pasos criticos hasta la entrega.</p></div><div class="flow-grid"><article><span>01</span><h3>Brief y presupuesto</h3><p>Definimos uso, eslora, marcas, rango de inversion y costos estimados.</p></article><article><span>02</span><h3>Busqueda y contacto</h3><p>Revisamos publicaciones, dealers y brokers; pedimos fotos, videos e historial.</p></article><article><span>03</span><h3>Inspeccion y negociacion</h3><p>Coordinamos inspeccion presencial y apoyamos la negociacion antes de comprar.</p></article><article><span>04</span><h3>Exportacion e importacion</h3><p>Acompanamos documentacion, logistica internacional, ingreso a Chile y entrega.</p></article></div></div></section>
-<section id="casos" class="cases"><div class="wrap"><div class="section-head"><h2>Casos reales de importacion</h2><p>El valor esta en acompanar decisiones complejas antes de comprometer dinero en Estados Unidos.</p></div><div class="case-grid"><div class="case-lead"><h3>De una publicacion en Estados Unidos a una embarcacion entregada en Chile.</h3><p>No se trata solo de encontrar una lancha atractiva, sino de validar si realmente conviene comprarla.</p><ol><li>Busqueda segun presupuesto, uso y zona de navegacion.</li><li>Contacto con vendedores, dealers o brokers en Estados Unidos.</li><li>Solicitud de fotos, videos, historial y antecedentes.</li><li>Inspeccion presencial y revision de condicion real.</li><li>Negociacion, compra asistida, exportacion e importacion.</li></ol></div><div class="case-cards"><article><h3>Evaluacion antes de comprar</h3><p>Descartamos unidades con senales de riesgo y priorizamos opciones por precio, condicion y logistica.</p></article><article><h3>Busqueda activa en mercado americano</h3><p>Revisamos Boat Trader, YachtWorld, Facebook Marketplace, dealers, brokers y oportunidades privadas.</p></article><article><h3>Acompanamiento hasta Chile</h3><p>Coordinamos inspeccion, negociacion, documentacion, exportacion, importacion y entrega final.</p></article></div></div></div></section>
-<section id="inventario" class="inventory"><div class="wrap"><div class="section-head"><h2>Inventario usado en consignacion en Chile</h2><p>Esta vitrina es complementaria: muestra oportunidades locales y experiencia comercial, pero el foco principal es importar desde USA.</p></div><div class="market-layout"><aside class="filters"><h3>Filtrar inventario</h3><div class="filter-group"><b>Estado</b><label><input type="checkbox" data-filter="status" value="disponible" checked> Disponible</label><label><input type="checkbox" data-filter="featured" value="true"> Destacadas</label></div><div class="filter-group"><b>Categoria</b><label><input type="checkbox" data-filter="category" value="lancha-premium"> Lancha Premium</label><label><input type="checkbox" data-filter="category" value="lancha-familiar"> Lancha Familiar</label><label><input type="checkbox" data-filter="category" value="wake-surf"> Wake & Surf</label></div><div class="filter-group"><b>Ubicacion</b><label><input type="checkbox" data-filter="location" value="pucon"> Pucon</label><label><input type="checkbox" data-filter="location" value="chillan"> Chillan</label><label><input type="checkbox" data-filter="location" value="rapel"> Rapel</label></div><p class="filter-note">Para buscar en Estados Unidos, agenda la busqueda personalizada.</p></aside><div><div class="results-bar"><strong><span data-results-count>8</span> embarcaciones disponibles</strong><label>Ordenar <select data-sort><option value="featured">Destacadas primero</option><option value="price-desc">Precio mayor a menor</option><option value="year-desc">Ano mas nuevo</option></select></label></div><div class="listings" data-listings>
-<article class="listing featured" data-category="lancha-premium" data-location="pucon" data-featured="true" data-status="disponible" data-price="78000000" data-year="2023"><div class="gallery" data-gallery><div class="main-photo"><span class="badge">Destacada</span><img data-main-photo src="sea-ray-gallery/sea-ray-spx-190-2023-1.jpg" alt="Sea Ray SPX 190 2023"></div><div class="thumbs"><button class="is-active" data-photo="sea-ray-gallery/sea-ray-spx-190-2023-1.jpg"><img src="sea-ray-gallery/sea-ray-spx-190-2023-1.jpg" alt=""></button><button data-photo="sea-ray-gallery/sea-ray-spx-190-2023-2.jpg"><img src="sea-ray-gallery/sea-ray-spx-190-2023-2.jpg" alt=""></button></div></div><div class="listing-main"><p class="tagline">Lancha Premium - 20 horas</p><h3>Sea Ray SPX 190 2023</h3><p>Unico dueno, torre wakeboard original, carro original y SeaDeck premium.</p><div class="specs"><span>MerCruiser 4.5 MPI 200 HP</span><span>2023</span><span>Disponible</span></div></div><div class="listing-side"><p class="price">$78.000.000 <small>CLP</small></p><p>Pucon, Chile</p><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20mas%20informacion%20sobre%20la%20Sea%20Ray%20SPX%20190%202023." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoria</a></div></article>
-<article class="listing featured" data-category="lancha-premium" data-location="pucon" data-featured="true" data-status="disponible" data-price="90000000" data-year="2015"><div class="placeholder">Cobalt R5 2015</div><div class="listing-main"><p class="tagline">Lancha Premium - 385 horas</p><h3>Cobalt R5 2015</h3><p>Terminaciones de lujo, Garmin integrado, carro incluido y uso exclusivo en agua dulce.</p><div class="specs"><span>Volvo Penta V8 300 HP</span><span>2015</span><span>Disponible</span></div></div><div class="listing-side"><p class="price">$90.000.000 <small>CLP</small></p><p>Pucon, Chile</p><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20mas%20informacion%20sobre%20Cobalt%20R5%202015." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoria</a></div></article>
-<article class="listing featured" data-category="wake-surf" data-location="chile" data-featured="true" data-status="disponible" data-price="85000000" data-year="2013"><div class="placeholder">MasterCraft X-Star 2013</div><div class="listing-main"><p class="tagline">Wake & Surf Boat - 283 horas</p><h3>MasterCraft X-Star 2013</h3><p>Wake boat profesional con ballast, sistema surf y carro original MasterCraft.</p><div class="specs"><span>ILMOR 7.4L V8</span><span>2013</span><span>Disponible</span></div></div><div class="listing-side"><p class="price">$85.000.000 <small>CLP</small></p><p>Chile</p><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20mas%20informacion%20sobre%20MasterCraft%20X-Star%202013." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoria</a></div></article>
-<article class="listing featured" data-category="lancha-premium" data-location="chillan" data-featured="true" data-status="disponible" data-price="70000000" data-year="2014"><div class="placeholder">Regal FasDeck 24 2014</div><div class="listing-main"><p class="tagline">Lancha Premium - 340 horas</p><h3>Regal FasDeck 24 2014</h3><p>Full equip con bano, lavamanos, lavapies, Power Tower y carro doble eje.</p><div class="specs"><span>Volvo Penta 5.7 V8 300 HP DPS</span><span>2014</span><span>Disponible</span></div></div><div class="listing-side"><p class="price">$70.000.000 <small>CLP</small></p><p>Chillan, Chile</p><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20mas%20informacion%20sobre%20Regal%20FasDeck%2024%202014." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoria</a></div></article>
-<article class="listing" data-category="lancha-familiar" data-location="chillan" data-featured="false" data-status="disponible" data-price="65000000" data-year="2013"><div class="placeholder">Regal FasDeck 24 2013</div><div class="listing-main"><p class="tagline">Lancha Familiar - 350 horas</p><h3>Regal FasDeck 24 2013</h3><p>Deck boat amplia para familia y deportes acuaticos. Bravo 3 doble helice.</p><div class="specs"><span>MerCruiser 350 MAG V8 Bravo 3</span><span>2013</span><span>Disponible</span></div></div><div class="listing-side"><p class="price">$65.000.000 <small>CLP</small></p><p>Chillan, Chile</p><a class="btn btn-teal" href="https://wa.me/56931054089" target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoria</a></div></article>
-<article class="listing" data-category="lancha-familiar" data-location="rapel" data-featured="false" data-status="disponible" data-price="45000000" data-year="2017"><div class="placeholder">Regal 2000 2017</div><div class="listing-main"><p class="tagline">Lancha Familiar - 170 horas</p><h3>Regal 2000 2017</h3><p>Torre electrica, casco FasTrac y solo 170 horas.</p><div class="specs"><span>Volvo Penta 5.0 V8</span><span>2017</span><span>Disponible</span></div></div><div class="listing-side"><p class="price">$45.000.000 <small>CLP</small></p><p>Rapel, Chile</p><a class="btn btn-teal" href="https://wa.me/56931054089" target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoria</a></div></article>
-<article class="listing" data-category="lancha-premium" data-location="rapel" data-featured="false" data-status="disponible" data-price="45000000" data-year="2007"><div class="placeholder">Cobalt 200 2007</div><div class="listing-main"><p class="tagline">Lancha Premium - 600 horas</p><h3>Cobalt 200 2007</h3><p>Cobalt premium con casco Deep-V y torre wake.</p><div class="specs"><span>MerCruiser 5.0 MPI V8</span><span>2007</span><span>Disponible</span></div></div><div class="listing-side"><p class="price">$45.000.000 <small>CLP</small></p><p>Rapel, Chile</p><a class="btn btn-teal" href="https://wa.me/56931054089" target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoria</a></div></article>
-<article class="listing" data-category="lancha-familiar" data-location="chile" data-featured="false" data-status="disponible" data-price="35000000" data-year="2012"><div class="placeholder">Sea Ray Sport 205 2012</div><div class="listing-main"><p class="tagline">Lancha Familiar - 250 horas</p><h3>Sea Ray Sport 205 2012</h3><p>Torre original Sea Ray, carro original y excelente estado general.</p><div class="specs"><span>MerCruiser 4.3 MPI</span><span>2012</span><span>Disponible</span></div></div><div class="listing-side"><p class="price">$35.000.000 <small>CLP</small></p><p>Chile</p><a class="btn btn-teal" href="https://wa.me/56931054089" target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoria</a></div></article>
-</div><p class="empty-state" data-empty-state>No hay embarcaciones que coincidan con esos filtros. Ajusta la busqueda o escribe por WhatsApp para buscar una alternativa en Estados Unidos.</p></div></div></div></section>
-<section class="advisor-band"><div class="wrap advisor-box"><div><h2>Quieres importar una embarcacion desde Estados Unidos?</h2><p>Agenda una asesoria antes de avanzar con una reserva, inspeccion o transferencia internacional.</p></div><a class="btn btn-primary" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Reservar Asesoria General</a></div></section>
-</main>
-<footer class="wrap">Alto Muelle Marine - Busqueda, compra asistida e importacion de embarcaciones desde Estados Unidos a Chile</footer>
-<script src="script.js"></script>
+  <header>
+    <nav class="wrap">
+      <div class="brand">Alto Muelle Marine</div>
+      <div class="nav-actions">
+        <a class="nav-link" href="#asesorias">Asesorías</a>
+        <a class="nav-link" href="#proceso">Proceso</a>
+        <a class="nav-link" href="#casos">Casos reales</a>
+        <a class="nav-link" href="#inventario">Inventario usado</a>
+        <a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Reservar</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-content">
+        <div class="eyebrow">Importación náutica USA · Chile</div>
+        <h1>Importamos embarcaciones desde Estados Unidos a Chile con acompañamiento profesional.</h1>
+        <p>Encuentra la embarcación correcta en Estados Unidos y tráela a Chile con respaldo experto en búsqueda, contacto con vendedores, inspección, negociación, exportación e importación.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Reservar Asesoría General</a>
+          <a class="btn btn-light" href="https://buy.stripe.com/5kQ8wP3g61sv5jsafNdby01" target="_blank" rel="noopener">Búsqueda Personalizada USA</a>
+          <a class="btn btn-ghost" href="#inventario">Ver Inventario Disponible</a>
+        </div>
+        <div class="hero-proof">
+          <span class="proof-pill">Búsqueda en Boat Trader, YachtWorld, dealers y brokers</span>
+          <span class="proof-pill">Inspección presencial y compra asistida</span>
+          <span class="proof-pill">Exportación, importación y entrega final</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="asesorias">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Las asesorías son la puerta de entrada a una importación bien ejecutada.</h2>
+          <p>Antes de reservar, transferir o viajar, revisamos viabilidad, costos, tiempos, riesgos y oportunidades reales para que tomes decisiones con información concreta.</p>
+        </div>
+        <div class="services">
+          <article class="service">
+            <b>Asesoría General de Importación</b>
+            <p>Para entender costos, impuestos, transporte, tiempos, documentación y viabilidad de importar una embarcación desde Estados Unidos.</p>
+            <div class="service-actions">
+              <a class="btn btn-primary" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Reservar asesoría</a>
+            </div>
+          </article>
+          <article class="service">
+            <b>Búsqueda personalizada USA</b>
+            <p>Servicio de 15 días para buscar embarcaciones según presupuesto y necesidad en Boat Trader, YachtWorld, Facebook Marketplace, dealers y brokers.</p>
+            <div class="service-actions">
+              <a class="btn btn-outline" href="https://buy.stripe.com/5kQ8wP3g61sv5jsafNdby01" target="_blank" rel="noopener">Contratar búsqueda</a>
+            </div>
+          </article>
+          <article class="service">
+            <b>Compra asistida e importación</b>
+            <p>Contacto con vendedores americanos, solicitud de fotos y videos, inspección presencial, negociación, exportación, importación y entrega final.</p>
+            <p>Ideal para clientes que ya tienen una opción vista o quieren avanzar con respaldo antes de comprometer dinero.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="founder" id="marcelo">
+      <div class="wrap">
+        <div class="founder-card">
+          <div class="founder-photo">
+            <img src="assets/Yo/marcelo-alto-muelle.jpg" alt="Marcelo de Alto Muelle Marine en una embarcación">
+          </div>
+          <div class="founder-copy">
+            <div class="eyebrow">Acompañamiento directo</div>
+            <h2>Te acompaño personalmente antes de comprar una embarcación en Estados Unidos.</h2>
+            <p>Soy Marcelo, fundador de Alto Muelle Marine. Ayudo a clientes chilenos a buscar, evaluar, negociar, comprar e importar embarcaciones desde Estados Unidos a Chile, con foco en evitar errores caros antes de transferir dinero o reservar una unidad.</p>
+            <div class="founder-points">
+              <span>Contacto con vendedores, dealers y brokers en EE.UU.</span>
+              <span>Revisión de documentación, condición y viabilidad de compra.</span>
+              <span>Coordinación de inspección, exportación, importación y entrega.</span>
+            </div>
+            <div class="founder-actions">
+              <a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20Marcelo,%20quiero%20evaluar%20la%20importaci%C3%B3n%20de%20una%20embarcaci%C3%B3n%20desde%20Estados%20Unidos%20a%20Chile." target="_blank" rel="noopener">Hablar directo por WhatsApp</a>
+              <a class="btn btn-outline" href="#casos">Ver casos reales</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso" class="import-flow">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Del mercado americano a tu marina en Chile, con control en cada etapa.</h2>
+          <p>El servicio está diseñado para comprar mejor antes de importar: primero validamos la oportunidad, luego coordinamos los pasos críticos hasta la entrega.</p>
+        </div>
+        <div class="flow-grid">
+          <article class="flow-step">
+            <span>01</span>
+            <b>Brief y presupuesto</b>
+            <p>Definimos uso, eslora, marcas objetivo, rango de inversión, ubicación ideal en USA y costos estimados de internación.</p>
+          </article>
+          <article class="flow-step">
+            <span>02</span>
+            <b>Búsqueda y contacto</b>
+            <p>Revisamos plataformas, dealers y brokers; contactamos vendedores y pedimos fotos, videos, historial y antecedentes.</p>
+          </article>
+          <article class="flow-step">
+            <span>03</span>
+            <b>Inspección y negociación</b>
+            <p>Coordinamos inspección presencial, levantamos observaciones y apoyamos la negociación antes de comprometer la compra.</p>
+          </article>
+          <article class="flow-step">
+            <span>04</span>
+            <b>Exportación e importación</b>
+            <p>Acompañamos documentación, logística internacional, ingreso a Chile y entrega final al cliente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="casos" class="cases">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Casos reales de importación</h2>
+          <p>El valor de Alto Muelle Marine está en acompañar decisiones complejas antes de que el cliente comprometa dinero en Estados Unidos.</p>
+        </div>
+
+        <div class="real-case-card">
+          <div class="case-gallery" data-gallery>
+            <div class="case-photo main-photo">
+              <span class="badge">Caso real</span>
+              <img data-main-photo src="assets/Inspections/SeaDoo-170-2023/1.jpeg" alt="Sea-Doo Wake 170 2023 importada desde Florida a Chile">
+            </div>
+            <div class="thumbs thumbs-scroll" aria-label="Fotos Sea-Doo Wake 170 2023">
+              <button type="button" class="is-active" data-photo="assets/Inspections/SeaDoo-170-2023/1.jpeg"><img src="assets/Inspections/SeaDoo-170-2023/1.jpeg" alt="Sea-Doo Wake 170 2023 foto 1"></button>
+              <button type="button" data-photo="assets/Inspections/SeaDoo-170-2023/2.jpeg"><img src="assets/Inspections/SeaDoo-170-2023/2.jpeg" alt="Sea-Doo Wake 170 2023 foto 2"></button>
+              <button type="button" data-photo="assets/Inspections/SeaDoo-170-2023/3.jpeg"><img src="assets/Inspections/SeaDoo-170-2023/3.jpeg" alt="Sea-Doo Wake 170 2023 foto 3"></button>
+              <button type="button" data-photo="assets/Inspections/SeaDoo-170-2023/4.jpeg"><img src="assets/Inspections/SeaDoo-170-2023/4.jpeg" alt="Sea-Doo Wake 170 2023 foto 4"></button>
+              <button type="button" data-photo="assets/Inspections/SeaDoo-170-2023/5.jpeg"><img src="assets/Inspections/SeaDoo-170-2023/5.jpeg" alt="Sea-Doo Wake 170 2023 foto 5"></button>
+              <button type="button" data-photo="assets/Inspections/SeaDoo-170-2023/6.jpeg"><img src="assets/Inspections/SeaDoo-170-2023/6.jpeg" alt="Sea-Doo Wake 170 2023 foto 6"></button>
+              <button type="button" data-photo="assets/Inspections/SeaDoo-170-2023/7.jpeg"><img src="assets/Inspections/SeaDoo-170-2023/7.jpeg" alt="Sea-Doo Wake 170 2023 foto 7"></button>
+              <button type="button" data-photo="assets/Inspections/SeaDoo-170-2023/8.jpeg"><img src="assets/Inspections/SeaDoo-170-2023/8.jpeg" alt="Sea-Doo Wake 170 2023 foto 8"></button>
+              <button type="button" data-photo="assets/Inspections/SeaDoo-170-2023/9.jpeg"><img src="assets/Inspections/SeaDoo-170-2023/9.jpeg" alt="Sea-Doo Wake 170 2023 foto 9"></button>
+            </div>
+          </div>
+
+          <div class="case-body">
+            <div class="case-kicker">Importación completa USA · Chile</div>
+            <h3>Sea-Doo Wake 170 2023</h3>
+            <p>El cliente buscaba específicamente esta moto de agua. Alto Muelle Marine la ubicó en St Petersburg, validó la documentación con el dueño particular, negoció, compró, coordinó bodega, exportación, recepción en Talcahuano, mantención y entrega final en la casa del comprador.</p>
+
+            <div class="case-specs">
+              <div class="case-spec"><span>Marca / modelo</span><b>Sea-Doo Wake 170</b></div>
+              <div class="case-spec"><span>Año</span><b>2023</b></div>
+              <div class="case-spec"><span>Tipo</span><b>Moto de agua / Wake</b></div>
+              <div class="case-spec"><span>Horas al comprar</span><b>38 h</b></div>
+              <div class="case-spec"><span>Lugar de compra</span><b>St Petersburg, Florida</b></div>
+              <div class="case-spec"><span>Lugar de entrega</span><b>Casa del comprador, Chile</b></div>
+              <div class="case-spec"><span>Recepción</span><b>Puerto de Talcahuano</b></div>
+              <div class="case-spec"><span>Tiempo aprox.</span><b>35 días a Chile</b></div>
+            </div>
+
+            <ul class="process-list">
+              <li><span>1</span>Búsqueda y negociación con dueño particular.</li>
+              <li><span>2</span>Verificación documental y transferencia a nuestra empresa.</li>
+              <li><span>3</span>Traslado a bodega, exportación e importación a Chile.</li>
+              <li><span>4</span>Recepción en Talcahuano, mantención y entrega final.</li>
+            </ul>
+
+            <div class="case-actions">
+              <a class="btn btn-primary" href="https://youtube.com/shorts/0uyYRsAPd1A" target="_blank" rel="noopener">Ver video del proceso</a>
+              <a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Reservar asesoría</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="real-case-card">
+          <div class="case-gallery" data-gallery>
+            <div class="case-photo main-photo">
+              <span class="badge">Alta gama</span>
+              <img data-main-photo src="assets/Inspections/Cobalt-242-2011/1.jpeg" alt="Cobalt 242 WSS 2011 importada desde Texas a Chile">
+            </div>
+            <div class="thumbs thumbs-scroll" aria-label="Fotos Cobalt 242 WSS 2011">
+              <button type="button" class="is-active" data-photo="assets/Inspections/Cobalt-242-2011/1.jpeg"><img src="assets/Inspections/Cobalt-242-2011/1.jpeg" alt="Cobalt 242 WSS 2011 foto 1"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-242-2011/2.jpeg"><img src="assets/Inspections/Cobalt-242-2011/2.jpeg" alt="Cobalt 242 WSS 2011 foto 2"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-242-2011/3.jpeg"><img src="assets/Inspections/Cobalt-242-2011/3.jpeg" alt="Cobalt 242 WSS 2011 foto 3"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-242-2011/4.jpeg"><img src="assets/Inspections/Cobalt-242-2011/4.jpeg" alt="Cobalt 242 WSS 2011 foto 4"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-242-2011/5.jpeg"><img src="assets/Inspections/Cobalt-242-2011/5.jpeg" alt="Cobalt 242 WSS 2011 foto 5"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-242-2011/6.jpeg"><img src="assets/Inspections/Cobalt-242-2011/6.jpeg" alt="Cobalt 242 WSS 2011 foto 6"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-242-2011/7.jpeg"><img src="assets/Inspections/Cobalt-242-2011/7.jpeg" alt="Cobalt 242 WSS 2011 foto 7"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-242-2011/8.jpeg"><img src="assets/Inspections/Cobalt-242-2011/8.jpeg" alt="Cobalt 242 WSS 2011 foto 8"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-242-2011/9.jpeg"><img src="assets/Inspections/Cobalt-242-2011/9.jpeg" alt="Cobalt 242 WSS 2011 foto 9"></button>
+            </div>
+          </div>
+
+          <div class="case-body">
+            <div class="case-kicker">Lancha premium importada desde Texas</div>
+            <h3>Cobalt 242 WSS 2011</h3>
+            <p>Lancha de alta gama comprada en Kemah, Texas. Revisamos documentación previa, hicimos la transferencia a nuestra empresa en Estados Unidos, coordinamos bodega, exportación, recepción en Talcahuano, mantención y entrega en Pucón, con prueba final junto al cliente en el lago Villarrica.</p>
+
+            <div class="case-specs">
+              <div class="case-spec"><span>Marca / modelo</span><b>Cobalt 242 WSS</b></div>
+              <div class="case-spec"><span>Año</span><b>2011</b></div>
+              <div class="case-spec"><span>Motor</span><b>Volvo Penta 8.1</b></div>
+              <div class="case-spec"><span>Horas al comprar</span><b>240 h</b></div>
+              <div class="case-spec"><span>Lugar de compra</span><b>Kemah, Texas</b></div>
+              <div class="case-spec"><span>Recepción</span><b>Puerto de Talcahuano</b></div>
+              <div class="case-spec"><span>Entrega</span><b>Pucón</b></div>
+              <div class="case-spec"><span>Prueba final</span><b>Lago Villarrica</b></div>
+            </div>
+
+            <ul class="process-list">
+              <li><span>1</span>Revisión documental y transferencia a nuestra empresa en EE.UU.</li>
+              <li><span>2</span>Traslado a bodega y coordinación de exportación a Chile.</li>
+              <li><span>3</span>Recepción en Talcahuano y mantención previa a la entrega.</li>
+              <li><span>4</span>Entrega en Pucón y prueba con el cliente en lago Villarrica.</li>
+            </ul>
+
+            <div class="case-actions">
+              <a class="btn btn-primary" href="https://youtube.com/shorts/8LPraXnKpuY" target="_blank" rel="noopener">Ver video del proceso</a>
+              <a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Reservar asesoría</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-grid legacy-case-grid">
+          <div class="case-lead">
+            <h3>De una publicación en Estados Unidos a una embarcación entregada en Chile.</h3>
+            <p>El proceso combina criterio comercial, revisión técnica, coordinación internacional y control de riesgos. No se trata solo de encontrar una lancha atractiva, sino de validar si realmente conviene comprarla.</p>
+            <ul class="process-list">
+              <li><span>1</span>Búsqueda según presupuesto, uso y zona de navegación.</li>
+              <li><span>2</span>Contacto con vendedores, dealers o brokers en Estados Unidos.</li>
+              <li><span>3</span>Solicitud de fotos, videos, historial y antecedentes relevantes.</li>
+              <li><span>4</span>Inspección presencial y revisión de condición real.</li>
+              <li><span>5</span>Negociación, compra asistida, exportación e importación a Chile.</li>
+            </ul>
+          </div>
+
+          <div class="case-cards">
+            <article class="case-card">
+              <b>Evaluación antes de comprar</b>
+              <p>Ayudamos a descartar unidades con señales de riesgo y a concentrar tiempo en opciones que sí tienen sentido por precio, condición, ubicación y costos logísticos.</p>
+              <div class="case-proof"><span>Riesgo reducido</span><span>Mejor decisión</span><span>Costos claros</span></div>
+            </article>
+            <article class="case-card">
+              <b>Búsqueda activa en mercado americano</b>
+              <p>La búsqueda personalizada no depende de una sola plataforma. Revisamos Boat Trader, YachtWorld, Facebook Marketplace, dealers, brokers y oportunidades privadas.</p>
+              <div class="case-proof"><span>15 días</span><span>Opciones comparables</span><span>Contacto directo</span></div>
+            </article>
+            <article class="case-card">
+              <b>Acompañamiento hasta Chile</b>
+              <p>Coordinamos pasos posteriores a la selección: inspección, negociación, documentación, exportación, importación y entrega final al cliente.</p>
+              <div class="case-proof"><span>Inspección</span><span>Exportación</span><span>Entrega final</span></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="inventario" class="inventory">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Inventario usado en consignación en Chile</h2>
+          <p>Esta sección es complementaria: una vitrina comercial de oportunidades disponibles en Chile y una muestra de experiencia en evaluación, presentación y gestión de embarcaciones.</p>
+        </div>
+
+        <div class="market-layout">
+          <aside class="filters" aria-label="Filtros del inventario">
+            <h3>Filtrar inventario</h3>
+            <div class="filters-inner">
+              <div class="filter-group">
+                <b>Estado</b>
+                <label><input type="checkbox" data-filter="status" value="disponible" checked> Disponible</label>
+                <label><input type="checkbox" data-filter="featured" value="true"> Destacadas</label>
+              </div>
+              <div class="filter-group">
+                <b>Categoría</b>
+                <label><input type="checkbox" data-filter="category" value="lancha-premium"> Lancha Premium</label>
+                <label><input type="checkbox" data-filter="category" value="lancha-familiar"> Lancha Familiar</label>
+                <label><input type="checkbox" data-filter="category" value="wake-surf"> Wake & Surf</label>
+              </div>
+              <div class="filter-group">
+                <b>Ubicación</b>
+                <label><input type="checkbox" data-filter="location" value="pucon"> Pucón</label>
+                <label><input type="checkbox" data-filter="location" value="chillan"> Chillán</label>
+                <label><input type="checkbox" data-filter="location" value="rapel"> Rapel</label>
+              </div>
+            </div>
+            <p class="filter-note">El inventario chileno es complementario. Para buscar en Estados Unidos, agenda la búsqueda personalizada.</p>
+          </aside>
+
+          <div>
+            <div class="results-bar">
+              <strong><span data-results-count>8</span> embarcaciones disponibles</strong>
+              <div class="sort">
+                <span>Ordenar</span>
+                <select aria-label="Ordenar inventario" data-sort>
+                  <option value="featured">Destacadas primero</option>
+                  <option value="price-desc">Precio mayor a menor</option>
+                  <option value="year-desc">Año más nuevo</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="listings" data-listings>
+              <article class="listing featured" data-category="lancha-premium" data-location="pucon" data-featured="true" data-status="disponible" data-price="78000000" data-year="2023">
+                <div class="gallery" data-gallery>
+                  <div class="main-photo">
+                    <span class="badge">Destacada</span>
+                    <img data-main-photo src="sea-ray-gallery/sea-ray-spx-190-2023-1.jpg" alt="Sea Ray SPX 190 2023 vista lateral">
+                  </div>
+                  <div class="thumbs" aria-label="Fotos Sea Ray SPX 190 2023">
+                    <button class="is-active" type="button" data-photo="sea-ray-gallery/sea-ray-spx-190-2023-1.jpg" aria-label="Ver foto lateral">
+                      <img src="sea-ray-gallery/sea-ray-spx-190-2023-1.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="sea-ray-gallery/sea-ray-spx-190-2023-2.jpg" aria-label="Ver foto popa">
+                      <img src="sea-ray-gallery/sea-ray-spx-190-2023-2.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="sea-ray-gallery/sea-ray-spx-190-2023-3.jpg" aria-label="Ver foto lateral completa">
+                      <img src="sea-ray-gallery/sea-ray-spx-190-2023-3.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="sea-ray-gallery/sea-ray-spx-190-2023-4.jpg" aria-label="Ver cockpit">
+                      <img src="sea-ray-gallery/sea-ray-spx-190-2023-4.jpg" alt="">
+                    </button>
+                  </div>
+                </div>
+                <div class="listing-main">
+                  <div class="meta-line"><span class="tag">Lancha Premium</span><span class="tag">20 horas</span></div>
+                  <h3>Sea Ray SPX 190 2023</h3>
+                  <p>Único dueño, solo 20 horas, torre wakeboard original, carro original y SeaDeck premium.</p>
+                  <div class="specs">
+                    <div class="spec"><span>Motor</span><b>MerCruiser 4.5 MPI 200 HP</b></div>
+                    <div class="spec"><span>Año</span><b>2023</b></div>
+                    <div class="spec"><span>Estado</span><b>Disponible</b></div>
+                  </div>
+                </div>
+                <div class="listing-side">
+                  <div>
+                    <div class="price">$78.000.000 <small>CLP</small></div>
+                    <div class="location">Pucón, Chile</div>
+                  </div>
+                  <div class="side-actions">
+                    <a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20Sea%20Ray%20SPX%20190%202023." target="_blank" rel="noopener">Consultar</a>
+                    <a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoría</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="listing featured" data-category="lancha-premium" data-location="pucon" data-featured="true" data-status="disponible" data-price="90000000" data-year="2015">
+                <div class="gallery" data-gallery>
+                  <div class="main-photo">
+                    <span class="badge">Destacada</span>
+                    <img data-main-photo src="assets/boats/Cobalt-r5-2015/1.jpeg" alt="Cobalt R5 2015 vista principal completa">
+                  </div>
+                  <div class="thumbs thumbs-scroll" aria-label="Fotos Cobalt R5 2015">
+                    <button class="is-active" type="button" data-photo="assets/boats/Cobalt-r5-2015/1.jpeg" aria-label="Ver foto 1 de Cobalt R5 2015">
+                      <img src="assets/boats/Cobalt-r5-2015/1.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-r5-2015/2.jpeg" aria-label="Ver foto 2 de Cobalt R5 2015">
+                      <img src="assets/boats/Cobalt-r5-2015/2.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-r5-2015/3.jpeg" aria-label="Ver foto 3 de Cobalt R5 2015">
+                      <img src="assets/boats/Cobalt-r5-2015/3.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-r5-2015/4.jpeg" aria-label="Ver foto 4 de Cobalt R5 2015">
+                      <img src="assets/boats/Cobalt-r5-2015/4.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-r5-2015/5.jpeg" aria-label="Ver foto 5 de Cobalt R5 2015">
+                      <img src="assets/boats/Cobalt-r5-2015/5.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-r5-2015/6.jpeg" aria-label="Ver foto 6 de Cobalt R5 2015">
+                      <img src="assets/boats/Cobalt-r5-2015/6.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-r5-2015/7.jpeg" aria-label="Ver foto 7 de Cobalt R5 2015">
+                      <img src="assets/boats/Cobalt-r5-2015/7.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-r5-2015/8.jpeg" aria-label="Ver foto 8 de Cobalt R5 2015">
+                      <img src="assets/boats/Cobalt-r5-2015/8.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-r5-2015/9.jpeg" aria-label="Ver foto 9 de Cobalt R5 2015">
+                      <img src="assets/boats/Cobalt-r5-2015/9.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-r5-2015/10.jpeg" aria-label="Ver foto 10 de Cobalt R5 2015">
+                      <img src="assets/boats/Cobalt-r5-2015/10.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-r5-2015/11.jpeg" aria-label="Ver foto 11 de Cobalt R5 2015">
+                      <img src="assets/boats/Cobalt-r5-2015/11.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-r5-2015/12.jpeg" aria-label="Ver foto 12 de Cobalt R5 2015">
+                      <img src="assets/boats/Cobalt-r5-2015/12.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-r5-2015/13.jpeg" aria-label="Ver foto 13 de Cobalt R5 2015">
+                      <img src="assets/boats/Cobalt-r5-2015/13.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-r5-2015/14.jpeg" aria-label="Ver foto 14 de Cobalt R5 2015">
+                      <img src="assets/boats/Cobalt-r5-2015/14.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-r5-2015/15.jpeg" aria-label="Ver foto 15 de Cobalt R5 2015">
+                      <img src="assets/boats/Cobalt-r5-2015/15.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-r5-2015/16.jpeg" aria-label="Ver foto 16 de Cobalt R5 2015">
+                      <img src="assets/boats/Cobalt-r5-2015/16.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-r5-2015/17.jpeg" aria-label="Ver foto 17 de Cobalt R5 2015">
+                      <img src="assets/boats/Cobalt-r5-2015/17.jpeg" alt="">
+                    </button>
+                  </div>
+                </div>
+                <div class="listing-main"><div class="meta-line"><span class="tag">Lancha Premium</span><span class="tag">385 horas</span></div><h3>Cobalt R5 2015</h3><p>Embarcación premium con terminaciones de lujo, Garmin integrado, carro incluido y uso exclusivo en agua dulce.</p><div class="specs"><div class="spec"><span>Motor</span><b>Volvo Penta V8 300 HP</b></div><div class="spec"><span>Año</span><b>2015</b></div><div class="spec"><span>Estado</span><b>Disponible</b></div></div></div>
+                <div class="listing-side"><div><div class="price">$90.000.000 <small>CLP</small></div><div class="location">Pucón, Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Cobalt%20R5%202015." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoría</a></div></div>
+              </article>
+
+              <article class="listing featured" data-category="wake-surf" data-location="chile" data-featured="true" data-status="disponible" data-price="85000000" data-year="2013">
+                <div class="gallery" data-gallery>
+                  <div class="main-photo">
+                    <span class="badge">Destacada</span>
+                    <img data-main-photo src="assets/boats/Mastercraft-xstar-2013/1.jpeg" alt="MasterCraft X-Star 2013 vista principal completa">
+                  </div>
+                  <div class="thumbs thumbs-scroll" aria-label="Fotos MasterCraft X-Star 2013">
+                    <button class="is-active" type="button" data-photo="assets/boats/Mastercraft-xstar-2013/1.jpeg" aria-label="Ver foto 1 de MasterCraft X-Star 2013">
+                      <img src="assets/boats/Mastercraft-xstar-2013/1.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Mastercraft-xstar-2013/2.jpeg" aria-label="Ver foto 2 de MasterCraft X-Star 2013">
+                      <img src="assets/boats/Mastercraft-xstar-2013/2.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Mastercraft-xstar-2013/3.jpeg" aria-label="Ver foto 3 de MasterCraft X-Star 2013">
+                      <img src="assets/boats/Mastercraft-xstar-2013/3.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Mastercraft-xstar-2013/4.jpeg" aria-label="Ver foto 4 de MasterCraft X-Star 2013">
+                      <img src="assets/boats/Mastercraft-xstar-2013/4.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Mastercraft-xstar-2013/5.jpeg" aria-label="Ver foto 5 de MasterCraft X-Star 2013">
+                      <img src="assets/boats/Mastercraft-xstar-2013/5.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Mastercraft-xstar-2013/6.jpeg" aria-label="Ver foto 6 de MasterCraft X-Star 2013">
+                      <img src="assets/boats/Mastercraft-xstar-2013/6.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Mastercraft-xstar-2013/7.jpeg" aria-label="Ver foto 7 de MasterCraft X-Star 2013">
+                      <img src="assets/boats/Mastercraft-xstar-2013/7.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Mastercraft-xstar-2013/8.jpeg" aria-label="Ver foto 8 de MasterCraft X-Star 2013">
+                      <img src="assets/boats/Mastercraft-xstar-2013/8.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Mastercraft-xstar-2013/9.jpeg" aria-label="Ver foto 9 de MasterCraft X-Star 2013">
+                      <img src="assets/boats/Mastercraft-xstar-2013/9.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Mastercraft-xstar-2013/10.jpeg" aria-label="Ver foto 10 de MasterCraft X-Star 2013">
+                      <img src="assets/boats/Mastercraft-xstar-2013/10.jpeg" alt="">
+                    </button>
+                  </div>
+                </div>
+                <div class="listing-main"><div class="meta-line"><span class="tag">Wake & Surf Boat</span><span class="tag">283 horas</span></div><h3>MasterCraft X-Star 2013</h3><p>Wake boat profesional con ballast, sistema surf y carro original MasterCraft.</p><div class="specs"><div class="spec"><span>Motor</span><b>ILMOR 7.4L V8</b></div><div class="spec"><span>Año</span><b>2013</b></div><div class="spec"><span>Estado</span><b>Disponible</b></div></div></div>
+                <div class="listing-side"><div><div class="price">$85.000.000 <small>CLP</small></div><div class="location">Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20MasterCraft%20X-Star%202013." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoría</a></div></div>
+              </article>
+
+              <article class="listing featured" data-category="lancha-premium" data-location="chillan" data-featured="true" data-status="disponible" data-price="70000000" data-year="2014">
+                <div class="gallery" data-gallery>
+                  <div class="main-photo">
+                    <span class="badge">Destacada</span>
+                    <img data-main-photo src="assets/boats/Regal-24-fasdeck-2014/1.jpeg" alt="Regal FasDeck 24 2014 vista principal completa">
+                  </div>
+                  <div class="thumbs thumbs-scroll" aria-label="Fotos Regal FasDeck 24 2014">
+                    <button class="is-active" type="button" data-photo="assets/boats/Regal-24-fasdeck-2014/1.jpeg" aria-label="Ver foto 1 de Regal FasDeck 24 2014">
+                      <img src="assets/boats/Regal-24-fasdeck-2014/1.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2014/2.jpeg" aria-label="Ver foto 2 de Regal FasDeck 24 2014">
+                      <img src="assets/boats/Regal-24-fasdeck-2014/2.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2014/3.jpeg" aria-label="Ver foto 3 de Regal FasDeck 24 2014">
+                      <img src="assets/boats/Regal-24-fasdeck-2014/3.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2014/4.jpeg" aria-label="Ver foto 4 de Regal FasDeck 24 2014">
+                      <img src="assets/boats/Regal-24-fasdeck-2014/4.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2014/5.jpeg" aria-label="Ver foto 5 de Regal FasDeck 24 2014">
+                      <img src="assets/boats/Regal-24-fasdeck-2014/5.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2014/6.jpeg" aria-label="Ver foto 6 de Regal FasDeck 24 2014">
+                      <img src="assets/boats/Regal-24-fasdeck-2014/6.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2014/10.jpeg" aria-label="Ver foto 10 de Regal FasDeck 24 2014">
+                      <img src="assets/boats/Regal-24-fasdeck-2014/10.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2014/12.jpeg" aria-label="Ver foto 12 de Regal FasDeck 24 2014">
+                      <img src="assets/boats/Regal-24-fasdeck-2014/12.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2014/18.jpeg" aria-label="Ver foto 18 de Regal FasDeck 24 2014">
+                      <img src="assets/boats/Regal-24-fasdeck-2014/18.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2014/19.jpeg" aria-label="Ver foto 19 de Regal FasDeck 24 2014">
+                      <img src="assets/boats/Regal-24-fasdeck-2014/19.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2014/22.jpeg" aria-label="Ver foto 22 de Regal FasDeck 24 2014">
+                      <img src="assets/boats/Regal-24-fasdeck-2014/22.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2014/24.jpeg" aria-label="Ver foto 24 de Regal FasDeck 24 2014">
+                      <img src="assets/boats/Regal-24-fasdeck-2014/24.jpeg" alt="">
+                    </button>
+                  </div>
+                </div>
+                <div class="listing-main"><div class="meta-line"><span class="tag">Lancha Premium</span><span class="tag">340 horas</span></div><h3>Regal FasDeck 24 2014</h3><p>Full equip con baño, lavamanos, lavapiés, Power Tower y carro doble eje.</p><div class="specs"><div class="spec"><span>Motor</span><b>Volvo Penta 5.7 V8 300 HP DPS</b></div><div class="spec"><span>Año</span><b>2014</b></div><div class="spec"><span>Estado</span><b>Disponible</b></div></div></div>
+                <div class="listing-side"><div><div class="price">$70.000.000 <small>CLP</small></div><div class="location">Chillán, Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Regal%20FasDeck%2024%202014." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoría</a></div></div>
+              </article>
+
+              <article class="listing" data-category="lancha-familiar" data-location="chillan" data-featured="false" data-status="disponible" data-price="65000000" data-year="2013">
+                <div class="gallery" data-gallery>
+                  <div class="main-photo">
+                    <span class="badge">Consignación</span>
+                    <img data-main-photo src="assets/boats/Regal-24-fasdeck-2013/1.jpeg" alt="Regal FasDeck 24 2013 vista principal completa">
+                  </div>
+                  <div class="thumbs thumbs-scroll" aria-label="Fotos Regal FasDeck 24 2013">
+                    <button class="is-active" type="button" data-photo="assets/boats/Regal-24-fasdeck-2013/1.jpeg" aria-label="Ver foto 1 de Regal FasDeck 24 2013">
+                      <img src="assets/boats/Regal-24-fasdeck-2013/1.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2013/2.jpeg" aria-label="Ver foto 2 de Regal FasDeck 24 2013">
+                      <img src="assets/boats/Regal-24-fasdeck-2013/2.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2013/3.jpeg" aria-label="Ver foto 3 de Regal FasDeck 24 2013">
+                      <img src="assets/boats/Regal-24-fasdeck-2013/3.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2013/4.jpeg" aria-label="Ver foto 4 de Regal FasDeck 24 2013">
+                      <img src="assets/boats/Regal-24-fasdeck-2013/4.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2013/5.jpeg" aria-label="Ver foto 5 de Regal FasDeck 24 2013">
+                      <img src="assets/boats/Regal-24-fasdeck-2013/5.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2013/6.jpeg" aria-label="Ver foto 6 de Regal FasDeck 24 2013">
+                      <img src="assets/boats/Regal-24-fasdeck-2013/6.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2013/7.jpeg" aria-label="Ver foto 7 de Regal FasDeck 24 2013">
+                      <img src="assets/boats/Regal-24-fasdeck-2013/7.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2013/8.jpeg" aria-label="Ver foto 8 de Regal FasDeck 24 2013">
+                      <img src="assets/boats/Regal-24-fasdeck-2013/8.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2013/9.jpeg" aria-label="Ver foto 9 de Regal FasDeck 24 2013">
+                      <img src="assets/boats/Regal-24-fasdeck-2013/9.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2013/10.jpeg" aria-label="Ver foto 10 de Regal FasDeck 24 2013">
+                      <img src="assets/boats/Regal-24-fasdeck-2013/10.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2013/11.jpeg" aria-label="Ver foto 11 de Regal FasDeck 24 2013">
+                      <img src="assets/boats/Regal-24-fasdeck-2013/11.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2013/12.jpeg" aria-label="Ver foto 12 de Regal FasDeck 24 2013">
+                      <img src="assets/boats/Regal-24-fasdeck-2013/12.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2013/13.jpeg" aria-label="Ver foto 13 de Regal FasDeck 24 2013">
+                      <img src="assets/boats/Regal-24-fasdeck-2013/13.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2013/14.jpeg" aria-label="Ver foto 14 de Regal FasDeck 24 2013">
+                      <img src="assets/boats/Regal-24-fasdeck-2013/14.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2013/15.jpeg" aria-label="Ver foto 15 de Regal FasDeck 24 2013">
+                      <img src="assets/boats/Regal-24-fasdeck-2013/15.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2013/16.jpeg" aria-label="Ver foto 16 de Regal FasDeck 24 2013">
+                      <img src="assets/boats/Regal-24-fasdeck-2013/16.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2013/17.jpeg" aria-label="Ver foto 17 de Regal FasDeck 24 2013">
+                      <img src="assets/boats/Regal-24-fasdeck-2013/17.jpeg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-24-fasdeck-2013/18.jpeg" aria-label="Ver foto 18 de Regal FasDeck 24 2013">
+                      <img src="assets/boats/Regal-24-fasdeck-2013/18.jpeg" alt="">
+                    </button>
+                  </div>
+                </div>
+                <div class="listing-main"><div class="meta-line"><span class="tag">Lancha Familiar</span><span class="tag">350 horas</span></div><h3>Regal FasDeck 24 2013</h3><p>Deck boat amplia para familia y deportes acuáticos. Bravo 3 doble hélice.</p><div class="specs"><div class="spec"><span>Motor</span><b>MerCruiser 350 MAG V8 Bravo 3</b></div><div class="spec"><span>Año</span><b>2013</b></div><div class="spec"><span>Estado</span><b>Disponible</b></div></div></div>
+                <div class="listing-side"><div><div class="price">$65.000.000 <small>CLP</small></div><div class="location">Chillán, Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Regal%20FasDeck%2024%202013." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoría</a></div></div>
+              </article>
+
+              <article class="listing" data-category="lancha-familiar" data-location="rapel" data-featured="false" data-status="disponible" data-price="45000000" data-year="2017">
+                <div class="gallery" data-gallery>
+                  <div class="main-photo">
+                    <span class="badge">Consignación</span>
+                    <img data-main-photo src="assets/boats/Regal-2000-2017/1.jpg" alt="Regal 2000 2017 vista principal completa">
+                  </div>
+                  <div class="thumbs thumbs-scroll" aria-label="Fotos Regal 2000 2017">
+                    <button class="is-active" type="button" data-photo="assets/boats/Regal-2000-2017/1.jpg" aria-label="Ver foto 1 de Regal 2000 2017">
+                      <img src="assets/boats/Regal-2000-2017/1.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-2000-2017/2.jpg" aria-label="Ver foto 2 de Regal 2000 2017">
+                      <img src="assets/boats/Regal-2000-2017/2.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-2000-2017/3.jpg" aria-label="Ver foto 3 de Regal 2000 2017">
+                      <img src="assets/boats/Regal-2000-2017/3.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-2000-2017/4.jpg" aria-label="Ver foto 4 de Regal 2000 2017">
+                      <img src="assets/boats/Regal-2000-2017/4.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-2000-2017/5.jpg" aria-label="Ver foto 5 de Regal 2000 2017">
+                      <img src="assets/boats/Regal-2000-2017/5.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-2000-2017/6.jpg" aria-label="Ver foto 6 de Regal 2000 2017">
+                      <img src="assets/boats/Regal-2000-2017/6.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-2000-2017/7.jpg" aria-label="Ver foto 7 de Regal 2000 2017">
+                      <img src="assets/boats/Regal-2000-2017/7.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-2000-2017/8.jpg" aria-label="Ver foto 8 de Regal 2000 2017">
+                      <img src="assets/boats/Regal-2000-2017/8.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-2000-2017/9.jpg" aria-label="Ver foto 9 de Regal 2000 2017">
+                      <img src="assets/boats/Regal-2000-2017/9.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-2000-2017/10.jpg" aria-label="Ver foto 10 de Regal 2000 2017">
+                      <img src="assets/boats/Regal-2000-2017/10.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-2000-2017/11.jpg" aria-label="Ver foto 11 de Regal 2000 2017">
+                      <img src="assets/boats/Regal-2000-2017/11.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-2000-2017/12.jpg" aria-label="Ver foto 12 de Regal 2000 2017">
+                      <img src="assets/boats/Regal-2000-2017/12.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-2000-2017/13.jpg" aria-label="Ver foto 13 de Regal 2000 2017">
+                      <img src="assets/boats/Regal-2000-2017/13.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-2000-2017/14.jpg" aria-label="Ver foto 14 de Regal 2000 2017">
+                      <img src="assets/boats/Regal-2000-2017/14.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-2000-2017/15.jpg" aria-label="Ver foto 15 de Regal 2000 2017">
+                      <img src="assets/boats/Regal-2000-2017/15.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-2000-2017/16.jpg" aria-label="Ver foto 16 de Regal 2000 2017">
+                      <img src="assets/boats/Regal-2000-2017/16.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Regal-2000-2017/18.jpg" aria-label="Ver foto 18 de Regal 2000 2017">
+                      <img src="assets/boats/Regal-2000-2017/18.jpg" alt="">
+                    </button>
+                  </div>
+                </div>
+                <div class="listing-main"><div class="meta-line"><span class="tag">Lancha Familiar</span><span class="tag">170 horas</span></div><h3>Regal 2000 2017</h3><p>Torre eléctrica, casco FasTrac y solo 170 horas.</p><div class="specs"><div class="spec"><span>Motor</span><b>Volvo Penta 5.0 V8</b></div><div class="spec"><span>Año</span><b>2017</b></div><div class="spec"><span>Estado</span><b>Disponible</b></div></div></div>
+                <div class="listing-side"><div><div class="price">$45.000.000 <small>CLP</small></div><div class="location">Rapel, Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Regal%202000%202017." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoría</a></div></div>
+              </article>
+
+              <article class="listing" data-category="lancha-premium" data-location="rapel" data-featured="false" data-status="disponible" data-price="45000000" data-year="2007">
+                <div class="gallery" data-gallery>
+                  <div class="main-photo">
+                    <span class="badge">Consignación</span>
+                    <img data-main-photo src="assets/boats/Cobalt-200-2007/1.jpg" alt="Cobalt 200 2007 vista principal completa">
+                  </div>
+                  <div class="thumbs thumbs-scroll" aria-label="Fotos Cobalt 200 2007">
+                    <button class="is-active" type="button" data-photo="assets/boats/Cobalt-200-2007/1.jpg" aria-label="Ver foto 1 de Cobalt 200 2007">
+                      <img src="assets/boats/Cobalt-200-2007/1.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-200-2007/2.jpg" aria-label="Ver foto 2 de Cobalt 200 2007">
+                      <img src="assets/boats/Cobalt-200-2007/2.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-200-2007/3.jpg" aria-label="Ver foto 3 de Cobalt 200 2007">
+                      <img src="assets/boats/Cobalt-200-2007/3.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-200-2007/4.jpg" aria-label="Ver foto 4 de Cobalt 200 2007">
+                      <img src="assets/boats/Cobalt-200-2007/4.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-200-2007/5.jpg" aria-label="Ver foto 5 de Cobalt 200 2007">
+                      <img src="assets/boats/Cobalt-200-2007/5.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/Cobalt-200-2007/6.jpg" aria-label="Ver foto 6 de Cobalt 200 2007">
+                      <img src="assets/boats/Cobalt-200-2007/6.jpg" alt="">
+                    </button>
+                  </div>
+                </div>
+                <div class="listing-main"><div class="meta-line"><span class="tag">Lancha Premium</span><span class="tag">600 horas</span></div><h3>Cobalt 200 2007</h3><p>Cobalt premium con casco Deep-V y torre wake.</p><div class="specs"><div class="spec"><span>Motor</span><b>MerCruiser 5.0 MPI V8</b></div><div class="spec"><span>Año</span><b>2007</b></div><div class="spec"><span>Estado</span><b>Disponible</b></div></div></div>
+                <div class="listing-side"><div><div class="price">$45.000.000 <small>CLP</small></div><div class="location">Rapel, Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Cobalt%20200%202007." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoría</a></div></div>
+              </article>
+
+              <article class="listing" data-category="lancha-familiar" data-location="chile" data-featured="false" data-status="disponible" data-price="35000000" data-year="2012">
+                <div class="gallery" data-gallery>
+                  <div class="main-photo">
+                    <span class="badge">Consignación</span>
+                    <img data-main-photo src="assets/boats/SeaRay-205-2012/1.jpg" alt="Sea Ray Sport 205 2012 vista principal completa">
+                  </div>
+                  <div class="thumbs thumbs-scroll" aria-label="Fotos Sea Ray Sport 205 2012">
+                    <button class="is-active" type="button" data-photo="assets/boats/SeaRay-205-2012/1.jpg" aria-label="Ver foto 1 de Sea Ray Sport 205 2012">
+                      <img src="assets/boats/SeaRay-205-2012/1.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/SeaRay-205-2012/2.jpg" aria-label="Ver foto 2 de Sea Ray Sport 205 2012">
+                      <img src="assets/boats/SeaRay-205-2012/2.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/SeaRay-205-2012/3.jpg" aria-label="Ver foto 3 de Sea Ray Sport 205 2012">
+                      <img src="assets/boats/SeaRay-205-2012/3.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/SeaRay-205-2012/4.jpg" aria-label="Ver foto 4 de Sea Ray Sport 205 2012">
+                      <img src="assets/boats/SeaRay-205-2012/4.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/SeaRay-205-2012/5.jpg" aria-label="Ver foto 5 de Sea Ray Sport 205 2012">
+                      <img src="assets/boats/SeaRay-205-2012/5.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/SeaRay-205-2012/6.jpg" aria-label="Ver foto 6 de Sea Ray Sport 205 2012">
+                      <img src="assets/boats/SeaRay-205-2012/6.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/SeaRay-205-2012/7.jpg" aria-label="Ver foto 7 de Sea Ray Sport 205 2012">
+                      <img src="assets/boats/SeaRay-205-2012/7.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/SeaRay-205-2012/8.jpg" aria-label="Ver foto 8 de Sea Ray Sport 205 2012">
+                      <img src="assets/boats/SeaRay-205-2012/8.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/SeaRay-205-2012/9.jpg" aria-label="Ver foto 9 de Sea Ray Sport 205 2012">
+                      <img src="assets/boats/SeaRay-205-2012/9.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/SeaRay-205-2012/11.jpg" aria-label="Ver foto 11 de Sea Ray Sport 205 2012">
+                      <img src="assets/boats/SeaRay-205-2012/11.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/SeaRay-205-2012/12.jpg" aria-label="Ver foto 12 de Sea Ray Sport 205 2012">
+                      <img src="assets/boats/SeaRay-205-2012/12.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/SeaRay-205-2012/13.jpg" aria-label="Ver foto 13 de Sea Ray Sport 205 2012">
+                      <img src="assets/boats/SeaRay-205-2012/13.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/SeaRay-205-2012/14.jpg" aria-label="Ver foto 14 de Sea Ray Sport 205 2012">
+                      <img src="assets/boats/SeaRay-205-2012/14.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/SeaRay-205-2012/15.jpg" aria-label="Ver foto 15 de Sea Ray Sport 205 2012">
+                      <img src="assets/boats/SeaRay-205-2012/15.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/SeaRay-205-2012/16.jpg" aria-label="Ver foto 16 de Sea Ray Sport 205 2012">
+                      <img src="assets/boats/SeaRay-205-2012/16.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/SeaRay-205-2012/17.jpg" aria-label="Ver foto 17 de Sea Ray Sport 205 2012">
+                      <img src="assets/boats/SeaRay-205-2012/17.jpg" alt="">
+                    </button>
+                    <button type="button" data-photo="assets/boats/SeaRay-205-2012/18.jpg" aria-label="Ver foto 18 de Sea Ray Sport 205 2012">
+                      <img src="assets/boats/SeaRay-205-2012/18.jpg" alt="">
+                    </button>
+                  </div>
+                </div>
+                <div class="listing-main"><div class="meta-line"><span class="tag">Lancha Familiar</span><span class="tag">250 horas</span></div><h3>Sea Ray Sport 205 2012</h3><p>Torre original Sea Ray, carro original y excelente estado general.</p><div class="specs"><div class="spec"><span>Motor</span><b>MerCruiser 4.3 MPI</b></div><div class="spec"><span>Año</span><b>2012</b></div><div class="spec"><span>Estado</span><b>Disponible</b></div></div></div>
+                <div class="listing-side"><div><div class="price">$35.000.000 <small>CLP</small></div><div class="location">Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Sea%20Ray%20Sport%20205%202012." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoría</a></div></div>
+              </article>
+            </div>
+            <div class="empty-state" data-empty-state>No hay embarcaciones que coincidan con esos filtros. Ajusta la búsqueda o escribe por WhatsApp para buscar una alternativa en Estados Unidos.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="advisor-band">
+      <div class="wrap advisor-box">
+        <div>
+          <h2>¿Quieres importar una embarcación desde Estados Unidos?</h2>
+          <p>Agenda una asesoría antes de avanzar con una reserva, inspección o transferencia internacional. Evitamos errores costosos mediante búsqueda, validación y compra asistida.</p>
+        </div>
+        <a class="btn btn-primary" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Reservar Asesoría General</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">Alto Muelle Marine · Búsqueda, compra asistida e importación de embarcaciones desde Estados Unidos a Chile</footer>
+
+  <div class="lightbox" data-lightbox aria-hidden="true">
+    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Galería de fotos">
+      <div class="lightbox-stage">
+        <button class="lightbox-close" type="button" data-lightbox-close aria-label="Cerrar galería">×</button>
+        <button class="lightbox-nav lightbox-prev" type="button" data-lightbox-prev aria-label="Foto anterior">‹</button>
+        <img data-lightbox-image src="" alt="">
+        <button class="lightbox-nav lightbox-next" type="button" data-lightbox-next aria-label="Foto siguiente">›</button>
+      </div>
+      <div class="lightbox-caption">
+        <span data-lightbox-title></span>
+        <span data-lightbox-count></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const listingsWrap = document.querySelector('[data-listings]');
+    const listings = Array.from(document.querySelectorAll('.listing'));
+    const filters = Array.from(document.querySelectorAll('[data-filter]'));
+    const sortSelect = document.querySelector('[data-sort]');
+    const resultsCount = document.querySelector('[data-results-count]');
+    const emptyState = document.querySelector('[data-empty-state]');
+
+    const lightbox = document.querySelector('[data-lightbox]');
+    const lightboxImage = document.querySelector('[data-lightbox-image]');
+    const lightboxTitle = document.querySelector('[data-lightbox-title]');
+    const lightboxCount = document.querySelector('[data-lightbox-count]');
+    const lightboxClose = document.querySelector('[data-lightbox-close]');
+    const lightboxPrev = document.querySelector('[data-lightbox-prev]');
+    const lightboxNext = document.querySelector('[data-lightbox-next]');
+    let activePhotos = [];
+    let activeIndex = 0;
+    let activeTitle = '';
+
+    const showLightboxPhoto = () => {
+      if (!activePhotos.length || !lightboxImage) return;
+      const photo = activePhotos[activeIndex];
+      lightboxImage.src = photo;
+      lightboxImage.alt = activeTitle ? `${activeTitle} foto ${activeIndex + 1}` : `Foto ${activeIndex + 1}`;
+      if (lightboxTitle) lightboxTitle.textContent = activeTitle;
+      if (lightboxCount) lightboxCount.textContent = `${activeIndex + 1} / ${activePhotos.length}`;
+    };
+
+    const openLightbox = (photos, index, title) => {
+      if (!photos.length) return;
+      activePhotos = photos;
+      activeIndex = index;
+      activeTitle = title;
+      showLightboxPhoto();
+      lightbox?.classList.add('is-open');
+      lightbox?.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeLightbox = () => {
+      lightbox?.classList.remove('is-open');
+      lightbox?.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      if (lightboxImage) lightboxImage.src = '';
+    };
+
+    const moveLightbox = (direction) => {
+      if (!activePhotos.length) return;
+      activeIndex = (activeIndex + direction + activePhotos.length) % activePhotos.length;
+      showLightboxPhoto();
+    };
+
+    document.querySelectorAll('[data-gallery]').forEach((gallery) => {
+      const mainPhoto = gallery.querySelector('[data-main-photo]');
+      const buttons = Array.from(gallery.querySelectorAll('[data-photo]'));
+      const listing = gallery.closest('.listing') || gallery.closest('.real-case-card');
+      const galleryTitle = listing?.querySelector('h3')?.textContent?.trim() || 'Embarcación';
+      const photos = buttons.map((button) => button.dataset.photo).filter(Boolean);
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          mainPhoto.src = button.dataset.photo;
+          buttons.forEach((item) => item.classList.remove('is-active'));
+          button.classList.add('is-active');
+        });
+      });
+
+      mainPhoto?.addEventListener('click', () => {
+        const currentPhoto = mainPhoto.getAttribute('src');
+        const currentIndex = Math.max(0, photos.indexOf(currentPhoto));
+        openLightbox(photos, currentIndex, galleryTitle);
+      });
+    });
+
+    lightboxClose?.addEventListener('click', closeLightbox);
+    lightboxPrev?.addEventListener('click', () => moveLightbox(-1));
+    lightboxNext?.addEventListener('click', () => moveLightbox(1));
+    lightbox?.addEventListener('click', (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (!lightbox?.classList.contains('is-open')) return;
+      if (event.key === 'Escape') closeLightbox();
+      if (event.key === 'ArrowLeft') moveLightbox(-1);
+      if (event.key === 'ArrowRight') moveLightbox(1);
+    });
+
+    const getSelected = (name) => filters
+      .filter((input) => input.dataset.filter === name && input.checked)
+      .map((input) => input.value);
+
+    const matchesGroup = (listing, name) => {
+      const selected = getSelected(name);
+      if (!selected.length) return true;
+      return selected.includes(listing.dataset[name]);
+    };
+
+    const sortListings = () => {
+      if (!listingsWrap || !sortSelect) return;
+      const sorted = [...listings].sort((a, b) => {
+        if (sortSelect.value === 'price-desc') {
+          return Number(b.dataset.price) - Number(a.dataset.price);
+        }
+        if (sortSelect.value === 'year-desc') {
+          return Number(b.dataset.year) - Number(a.dataset.year);
+        }
+        return Number(b.dataset.featured === 'true') - Number(a.dataset.featured === 'true')
+          || Number(b.dataset.year) - Number(a.dataset.year);
+      });
+
+      sorted.forEach((listing) => listingsWrap.appendChild(listing));
+    };
+
+    const applyFilters = () => {
+      let visible = 0;
+
+      listings.forEach((listing) => {
+        const onlyFeatured = getSelected('featured').includes('true');
+        const shouldShow =
+          matchesGroup(listing, 'status') &&
+          matchesGroup(listing, 'category') &&
+          matchesGroup(listing, 'location') &&
+          (!onlyFeatured || listing.dataset.featured === 'true');
+
+        listing.classList.toggle('is-hidden', !shouldShow);
+        if (shouldShow) visible += 1;
+      });
+
+      if (resultsCount) resultsCount.textContent = visible.toString();
+      emptyState?.classList.toggle('is-visible', visible === 0);
+    };
+
+    filters.forEach((input) => input.addEventListener('change', applyFilters));
+    sortSelect?.addEventListener('change', () => {
+      sortListings();
+      applyFilters();
+    });
+
+    sortListings();
+    applyFilters();
+  </script>
 </body>
 </html>
