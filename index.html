@@ -1189,6 +1189,9 @@
       .services {
         display: block;
       }
+      .legacy-case-grid {
+        display: none;
+      }
       .flow-step,
       .service + .service {
         margin-top: 12px;
@@ -1216,6 +1219,83 @@
       }
       .case-actions .btn {
         width: 100%;
+      }
+      #casos .section-head {
+        margin-bottom: 22px;
+      }
+      #casos .section-head p {
+        font-size: 15px;
+        line-height: 1.48;
+      }
+      #casos .real-case-card {
+        padding: 9px;
+        box-shadow: 0 8px 18px rgba(7,24,36,.05);
+      }
+      #casos .real-case-card + .real-case-card {
+        margin-top: 12px;
+      }
+      #casos .case-photo {
+        aspect-ratio: 16 / 9;
+      }
+      #casos .thumbs {
+        display: none;
+      }
+      #casos .case-body {
+        padding: 10px 2px 2px;
+      }
+      #casos .case-kicker {
+        margin-bottom: 6px;
+        font-size: 10px;
+        letter-spacing: .07em;
+      }
+      #casos .case-body h3 {
+        margin-bottom: 7px;
+        font-size: 21px;
+        line-height: 1.08;
+      }
+      #casos .case-body p {
+        margin-bottom: 10px;
+        font-size: 13px;
+        line-height: 1.42;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+      }
+      #casos .case-specs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+        margin-bottom: 10px;
+      }
+      #casos .case-spec:nth-child(n + 5) {
+        display: none;
+      }
+      #casos .case-spec {
+        min-height: 46px;
+        padding: 6px 7px;
+      }
+      #casos .case-spec span {
+        font-size: 10px;
+        line-height: 1.15;
+      }
+      #casos .case-spec b {
+        font-size: 11px;
+        line-height: 1.18;
+      }
+      #casos .process-list {
+        display: none;
+      }
+      #casos .case-actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 10px;
+      }
+      #casos .case-actions .btn {
+        min-height: 40px;
+        padding: 9px 10px;
+        font-size: 12px;
+        line-height: 1.08;
       }
       .section-head p { margin-top: 10px; }
       .filters-inner { display: block; }
@@ -1255,6 +1335,128 @@
         height: 52px;
       }
     }
+
+    /* Compact mobile header. Desktop keeps the current published layout. */
+    @media (max-width: 760px) {
+      header {
+        background: rgba(255,255,255,.98);
+      }
+
+      nav {
+        min-height: auto;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        align-items: center;
+        gap: 7px 10px;
+        padding: 7px 0 9px;
+      }
+
+      .brand {
+        grid-column: 1 / 4;
+        grid-row: 1;
+        gap: 7px;
+        min-width: 0;
+        letter-spacing: .045em;
+        font-size: 13px;
+        line-height: 1.05;
+      }
+
+      .brand img {
+        width: 62px;
+        flex: 0 0 auto;
+      }
+
+      .brand span {
+        max-width: 136px;
+      }
+
+      .nav-actions {
+        display: contents;
+      }
+
+      .nav-link {
+        grid-row: 2;
+        justify-self: center;
+        font-size: 12px;
+        line-height: 1.05;
+        white-space: nowrap;
+      }
+
+      .nav-link .mobile-extra {
+        display: none;
+      }
+
+      .nav-actions .nav-link:nth-of-type(1) { grid-column: 1; justify-self: start; }
+      .nav-actions .nav-link:nth-of-type(2) { grid-column: 2; }
+      .nav-actions .nav-link:nth-of-type(3) { grid-column: 3; }
+      .nav-actions .nav-link:nth-of-type(4) { grid-column: 4; justify-self: end; }
+
+      .nav-actions .btn {
+        grid-column: 4;
+        grid-row: 1;
+        justify-self: end;
+        min-height: 36px;
+        padding: 0 13px;
+        border: 1px solid rgba(7,24,36,.18);
+        background: #fff;
+        color: var(--navy);
+        box-shadow: 0 2px 8px rgba(7,24,36,.08);
+        font-size: 13px;
+      }
+
+      .hero {
+        min-height: calc(100svh - 76px);
+        padding: 36px 0 32px;
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      h1 {
+        font-size: 36px;
+        line-height: 1;
+      }
+
+      .hero p {
+        font-size: 16px;
+        line-height: 1.45;
+      }
+
+      .hero-actions {
+        gap: 8px;
+      }
+
+      .hero-proof {
+        gap: 6px;
+      }
+
+      .hero-proof span {
+        font-size: 11px;
+        padding: 7px 9px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .brand img {
+        width: 58px;
+      }
+
+      .brand span {
+        max-width: 116px;
+        font-size: 12px;
+      }
+
+      .nav-link {
+        font-size: 11px;
+      }
+
+      .nav-actions .btn {
+        min-height: 34px;
+        padding: 0 11px;
+        font-size: 12px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1268,7 +1470,7 @@
         <a class="nav-link" href="#asesorias">Asesorías</a>
         <a class="nav-link" href="#proceso">Proceso</a>
         <a class="nav-link" href="#casos">Casos reales</a>
-        <a class="nav-link" href="#inventario">Inventario usado</a>
+        <a class="nav-link" href="#inventario">Inventario <span class="mobile-extra">usado</span></a>
         <a class="btn btn-dark" href="https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02" target="_blank" rel="noopener">Reservar</a>
       </div>
     </nav>
@@ -2226,7 +2428,19 @@
     let activeIndex = 0;
     let activeTitle = '';
 
-    const renderCasePage = () => {
+    const scrollCaseCardsIntoView = () => {
+      const firstVisibleCase = caseCards.find((card) => !card.classList.contains('is-hidden'));
+      if (!firstVisibleCase) return;
+
+      const headerOffset = 88;
+      const targetTop = firstVisibleCase.getBoundingClientRect().top + window.scrollY - headerOffset;
+      window.scrollTo({
+        top: Math.max(targetTop, 0),
+        behavior: 'smooth'
+      });
+    };
+
+    const renderCasePage = (shouldFocusCards = false) => {
       const totalPages = Math.max(1, Math.ceil(caseCards.length / CASES_PER_PAGE));
       casePage = Math.min(Math.max(casePage, 0), totalPages - 1);
 
@@ -2240,16 +2454,17 @@
       if (caseStatus) caseStatus.textContent = `${casePage + 1} / ${totalPages}`;
       if (casePrev) casePrev.disabled = casePage === 0;
       if (caseNext) caseNext.disabled = casePage >= totalPages - 1;
+      if (shouldFocusCards) requestAnimationFrame(scrollCaseCardsIntoView);
     };
 
     casePrev?.addEventListener('click', () => {
       casePage -= 1;
-      renderCasePage();
+      renderCasePage(true);
     });
 
     caseNext?.addEventListener('click', () => {
       casePage += 1;
-      renderCasePage();
+      renderCasePage(true);
     });
 
     const showLightboxPhoto = () => {
