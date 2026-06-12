@@ -20,12 +20,18 @@
       "url": "https://altomuellemarine.com/",
       "areaServed": ["Chile", "United States"],
       "telephone": "+56931054089",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Maipón 100",
+        "addressLocality": "Chillán",
+        "addressCountry": "CL"
+      },
       "description": "Asesoría, búsqueda personalizada, compra asistida e importación de embarcaciones desde Estados Unidos a Chile.",
       "makesOffer": [
         {
           "@type": "Offer",
           "name": "Asesoría General de Importación",
-          "url": "https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00"
+          "url": "https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02"
         },
         {
           "@type": "Offer",
@@ -85,10 +91,20 @@
     }
 
     .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       color: var(--navy);
       font-weight: 900;
       letter-spacing: .08em;
       text-transform: uppercase;
+    }
+
+    .brand img {
+      width: 86px;
+      height: auto;
+      display: block;
+      object-fit: contain;
     }
 
     .nav-actions {
@@ -126,6 +142,7 @@
     .btn-ghost { border: 1px solid rgba(255,255,255,.72); color: #fff; }
     .btn-teal { background: var(--teal); color: #fff; }
     .btn-outline { border: 1px solid var(--line); background: #fff; color: var(--navy); }
+    .btn:disabled { opacity: .45; cursor: not-allowed; }
 
     .hero {
       min-height: 610px;
@@ -213,6 +230,15 @@
       color: var(--muted);
     }
 
+    .section-note-link {
+      display: inline-flex;
+      margin-top: 10px;
+      color: var(--teal);
+      font-size: 14px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
     .services {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -251,6 +277,23 @@
       min-height: 40px;
       padding: 9px 12px;
       font-size: 13px;
+    }
+
+    .booking-note {
+      margin-top: 12px;
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .booking-note a {
+      color: var(--teal);
+      font-weight: 800;
+      text-decoration: none;
     }
 
     .founder {
@@ -324,6 +367,18 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+    }
+
+    .founder-contact-note {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .founder-contact-note a {
+      color: var(--teal);
+      font-weight: 800;
+      text-decoration: none;
     }
 
     .import-flow {
@@ -497,6 +552,10 @@
       margin-top: 16px;
     }
 
+    .real-case-card.is-hidden {
+      display: none;
+    }
+
     .case-gallery {
       align-self: start;
       background: var(--navy);
@@ -581,6 +640,26 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+    }
+
+    .case-pager {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .case-pager.is-visible {
+      display: flex;
+    }
+
+    .case-page-status {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      min-width: 48px;
+      text-align: center;
     }
 
     .inventory {
@@ -1039,6 +1118,37 @@
       font-size: 13px;
     }
 
+    .footer-brand {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .footer-brand span {
+      display: block;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+      padding-left: 108px;
+    }
+
+    .footer-links a {
+      color: var(--teal);
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .footer-brand img {
+      width: 96px;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
     @media (max-width: 1040px) {
       .market-layout { grid-template-columns: 1fr; }
       .filters { position: static; }
@@ -1150,13 +1260,16 @@
 <body>
   <header>
     <nav class="wrap">
-      <div class="brand">Alto Muelle Marine</div>
+      <div class="brand">
+        <img src="assets/Logo alto muelle/alto-muelle-logo-cropped.png" alt="Alto Muelle Marine">
+        <span>Alto Muelle Marine</span>
+      </div>
       <div class="nav-actions">
         <a class="nav-link" href="#asesorias">Asesorías</a>
         <a class="nav-link" href="#proceso">Proceso</a>
         <a class="nav-link" href="#casos">Casos reales</a>
         <a class="nav-link" href="#inventario">Inventario usado</a>
-        <a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Reservar</a>
+        <a class="btn btn-dark" href="https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02" target="_blank" rel="noopener">Reservar</a>
       </div>
     </nav>
   </header>
@@ -1168,7 +1281,7 @@
         <h1>Importamos embarcaciones desde Estados Unidos a Chile con acompañamiento profesional.</h1>
         <p>Encuentra la embarcación correcta en Estados Unidos y tráela a Chile con respaldo experto en búsqueda, contacto con vendedores, inspección, negociación, exportación e importación.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Reservar Asesoría General</a>
+          <a class="btn btn-primary" href="https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02" target="_blank" rel="noopener">Reservar Asesoría General</a>
           <a class="btn btn-light" href="https://buy.stripe.com/5kQ8wP3g61sv5jsafNdby01" target="_blank" rel="noopener">Búsqueda Personalizada USA</a>
           <a class="btn btn-ghost" href="#inventario">Ver Inventario Disponible</a>
         </div>
@@ -1191,7 +1304,11 @@
             <b>Asesoría General de Importación</b>
             <p>Para entender costos, impuestos, transporte, tiempos, documentación y viabilidad de importar una embarcación desde Estados Unidos.</p>
             <div class="service-actions">
-              <a class="btn btn-primary" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Reservar asesoría</a>
+              <a class="btn btn-primary" href="https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02" target="_blank" rel="noopener">Reservar asesoría</a>
+            </div>
+            <div class="booking-note">
+              Pago por Stripe. Luego agenda tu horario disponible en Google Calendar:
+              <a href="https://calendar.app.google/jx8Ucnp4PcRwafrR9" target="_blank" rel="noopener">ver agenda</a>.
             </div>
           </article>
           <article class="service">
@@ -1199,6 +1316,10 @@
             <p>Servicio de 15 días para buscar embarcaciones según presupuesto y necesidad en Boat Trader, YachtWorld, Facebook Marketplace, dealers y brokers.</p>
             <div class="service-actions">
               <a class="btn btn-outline" href="https://buy.stripe.com/5kQ8wP3g61sv5jsafNdby01" target="_blank" rel="noopener">Contratar búsqueda</a>
+            </div>
+            <div class="booking-note">
+              Pago por Stripe. Luego coordinamos la llamada inicial en Google Calendar:
+              <a href="https://calendar.google.com/appointments/schedules/AcZssZ1Z3f2TOa_aLx35xtp7EQpvg5s0lNNIqKpmiLsOS3Sw1RC2d463eEOlGuL9uSdhswZYm1XDpOOg" target="_blank" rel="noopener">ver agenda</a>.
             </div>
           </article>
           <article class="service">
@@ -1226,8 +1347,11 @@
               <span>Coordinación de inspección, exportación, importación y entrega.</span>
             </div>
             <div class="founder-actions">
-              <a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20Marcelo,%20quiero%20evaluar%20la%20importaci%C3%B3n%20de%20una%20embarcaci%C3%B3n%20desde%20Estados%20Unidos%20a%20Chile." target="_blank" rel="noopener">Hablar directo por WhatsApp</a>
+              <a class="btn btn-primary" href="https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02" target="_blank" rel="noopener">Reservar asesoría de importación</a>
               <a class="btn btn-outline" href="#casos">Ver casos reales</a>
+            </div>
+            <div class="founder-contact-note">
+              Para consultas comerciales generales: <a href="mailto:info@conchaexport.com">info@conchaexport.com</a>
             </div>
           </div>
         </div>
@@ -1269,13 +1393,15 @@
       <div class="wrap">
         <div class="section-head">
           <h2>Casos reales de importación</h2>
-          <p>El valor de Alto Muelle Marine está en acompañar decisiones complejas antes de que el cliente comprometa dinero en Estados Unidos.</p>
+          <p>El valor de Alto Muelle Marine está en acompañar decisiones complejas antes de que el cliente comprometa dinero en Estados Unidos.
+            <a class="section-note-link" href="https://www.instagram.com/altomuellemarine/" target="_blank" rel="noopener">Ver más videos y procesos en Instagram @altomuellemarine</a>
+          </p>
         </div>
 
         <div class="real-case-card">
           <div class="case-gallery" data-gallery>
             <div class="case-photo main-photo">
-              <span class="badge">Caso real</span>
+              <span class="badge">Entregada</span>
               <img data-main-photo src="assets/Inspections/SeaDoo-170-2023/1.jpeg" alt="Sea-Doo Wake 170 2023 importada desde Florida a Chile">
             </div>
             <div class="thumbs thumbs-scroll" aria-label="Fotos Sea-Doo Wake 170 2023">
@@ -1316,7 +1442,7 @@
 
             <div class="case-actions">
               <a class="btn btn-primary" href="https://youtube.com/shorts/0uyYRsAPd1A" target="_blank" rel="noopener">Ver video del proceso</a>
-              <a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Reservar asesoría</a>
+              <a class="btn btn-dark" href="https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02" target="_blank" rel="noopener">Reservar asesoría</a>
             </div>
           </div>
         </div>
@@ -1324,7 +1450,7 @@
         <div class="real-case-card">
           <div class="case-gallery" data-gallery>
             <div class="case-photo main-photo">
-              <span class="badge">Alta gama</span>
+              <span class="badge">Entregada</span>
               <img data-main-photo src="assets/Inspections/Cobalt-242-2011/1.jpeg" alt="Cobalt 242 WSS 2011 importada desde Texas a Chile">
             </div>
             <div class="thumbs thumbs-scroll" aria-label="Fotos Cobalt 242 WSS 2011">
@@ -1365,9 +1491,164 @@
 
             <div class="case-actions">
               <a class="btn btn-primary" href="https://youtube.com/shorts/8LPraXnKpuY" target="_blank" rel="noopener">Ver video del proceso</a>
-              <a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Reservar asesoría</a>
+              <a class="btn btn-dark" href="https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02" target="_blank" rel="noopener">Reservar asesoría</a>
             </div>
           </div>
+        </div>
+
+        <div class="real-case-card">
+          <div class="case-gallery" data-gallery>
+            <div class="case-photo main-photo">
+              <span class="badge">Entregada</span>
+              <img data-main-photo src="assets/Inspections/Pontoon-Suntracker-2016/1.jpeg" alt="Sun Tracker DLX 21 pies 2016 importado desde Florida a Chile">
+            </div>
+            <div class="thumbs thumbs-scroll" aria-label="Fotos Sun Tracker DLX 2016">
+              <button type="button" class="is-active" data-photo="assets/Inspections/Pontoon-Suntracker-2016/1.jpeg"><img src="assets/Inspections/Pontoon-Suntracker-2016/1.jpeg" alt="Sun Tracker DLX 2016 foto 1"></button>
+              <button type="button" data-photo="assets/Inspections/Pontoon-Suntracker-2016/2.jpeg"><img src="assets/Inspections/Pontoon-Suntracker-2016/2.jpeg" alt="Sun Tracker DLX 2016 foto 2"></button>
+              <button type="button" data-photo="assets/Inspections/Pontoon-Suntracker-2016/3.jpeg"><img src="assets/Inspections/Pontoon-Suntracker-2016/3.jpeg" alt="Sun Tracker DLX 2016 foto 3"></button>
+              <button type="button" data-photo="assets/Inspections/Pontoon-Suntracker-2016/4.jpeg"><img src="assets/Inspections/Pontoon-Suntracker-2016/4.jpeg" alt="Sun Tracker DLX 2016 foto 4"></button>
+              <button type="button" data-photo="assets/Inspections/Pontoon-Suntracker-2016/5.jpeg"><img src="assets/Inspections/Pontoon-Suntracker-2016/5.jpeg" alt="Sun Tracker DLX 2016 foto 5"></button>
+              <button type="button" data-photo="assets/Inspections/Pontoon-Suntracker-2016/6.jpeg"><img src="assets/Inspections/Pontoon-Suntracker-2016/6.jpeg" alt="Sun Tracker DLX 2016 foto 6"></button>
+              <button type="button" data-photo="assets/Inspections/Pontoon-Suntracker-2016/7.jpeg"><img src="assets/Inspections/Pontoon-Suntracker-2016/7.jpeg" alt="Sun Tracker DLX 2016 foto 7"></button>
+              <button type="button" data-photo="assets/Inspections/Pontoon-Suntracker-2016/8.jpeg"><img src="assets/Inspections/Pontoon-Suntracker-2016/8.jpeg" alt="Sun Tracker DLX 2016 foto 8"></button>
+            </div>
+          </div>
+
+          <div class="case-body">
+            <div class="case-kicker">Pontoon importado desde Florida</div>
+            <h3>Sun Tracker DLX 21' 2016</h3>
+            <p>Pontoon usado comprado en Cooper City, Florida, según los requerimientos del cliente: una embarcación cómoda para paseos familiares en el lago Caburgua. Alto Muelle Marine realizó la búsqueda, validación, compra asistida, coordinación logística e importación hasta la entrega al cliente en Chile.</p>
+
+            <div class="case-specs">
+              <div class="case-spec"><span>Marca / modelo</span><b>Sun Tracker DLX</b></div>
+              <div class="case-spec"><span>Año</span><b>2016</b></div>
+              <div class="case-spec"><span>Eslora</span><b>21 pies</b></div>
+              <div class="case-spec"><span>Motor</span><b>Mercury 90 HP</b></div>
+              <div class="case-spec"><span>Lugar de compra</span><b>Cooper City, Florida</b></div>
+              <div class="case-spec"><span>Uso buscado</span><b>Paseos en lago Caburgua</b></div>
+              <div class="case-spec"><span>Tipo</span><b>Pontoon familiar</b></div>
+              <div class="case-spec"><span>Entrega</span><b>Cliente en Chile</b></div>
+            </div>
+
+            <ul class="process-list">
+              <li><span>1</span>Búsqueda según el uso real que el cliente quería dar en lago Caburgua.</li>
+              <li><span>2</span>Inspección presencial y revisión del pontoon antes de avanzar.</li>
+              <li><span>3</span>Compra asistida en Florida y coordinación para exportación a Chile.</li>
+              <li><span>4</span>Recepción, gestión local y entrega final al cliente.</li>
+            </ul>
+
+            <div class="case-actions">
+              <a class="btn btn-primary" href="https://youtu.be/BaRAJRlHg4M" target="_blank" rel="noopener">Ver inspección en video</a>
+              <a class="btn btn-dark" href="https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02" target="_blank" rel="noopener">Reservar asesoría</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="real-case-card">
+          <div class="case-gallery" data-gallery>
+            <div class="case-photo main-photo">
+              <span class="badge">En proceso</span>
+              <img data-main-photo src="assets/Inspections/Cobalt-R3-2020/1.jpeg" alt="Cobalt R3 2020 en proceso de importaci&oacute;n desde Kentucky a Chile">
+            </div>
+            <div class="thumbs thumbs-scroll" aria-label="Fotos Cobalt R3 2020">
+              <button type="button" class="is-active" data-photo="assets/Inspections/Cobalt-R3-2020/1.jpeg"><img src="assets/Inspections/Cobalt-R3-2020/1.jpeg" alt="Cobalt R3 2020 foto 1"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-R3-2020/2.jpeg"><img src="assets/Inspections/Cobalt-R3-2020/2.jpeg" alt="Cobalt R3 2020 foto 2"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-R3-2020/3.jpeg"><img src="assets/Inspections/Cobalt-R3-2020/3.jpeg" alt="Cobalt R3 2020 foto 3"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-R3-2020/4.jpeg"><img src="assets/Inspections/Cobalt-R3-2020/4.jpeg" alt="Cobalt R3 2020 foto 4"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-R3-2020/5.jpeg"><img src="assets/Inspections/Cobalt-R3-2020/5.jpeg" alt="Cobalt R3 2020 foto 5"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-R3-2020/6.jpeg"><img src="assets/Inspections/Cobalt-R3-2020/6.jpeg" alt="Cobalt R3 2020 foto 6"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-R3-2020/7.jpeg"><img src="assets/Inspections/Cobalt-R3-2020/7.jpeg" alt="Cobalt R3 2020 foto 7"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-R3-2020/8.jpeg"><img src="assets/Inspections/Cobalt-R3-2020/8.jpeg" alt="Cobalt R3 2020 foto 8"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-R3-2020/9.jpeg"><img src="assets/Inspections/Cobalt-R3-2020/9.jpeg" alt="Cobalt R3 2020 foto 9"></button>
+            </div>
+          </div>
+
+          <div class="case-body">
+            <div class="case-kicker">Importaci&oacute;n activa desde Kentucky</div>
+            <h3>Cobalt R3 2020</h3>
+            <p>Lancha Cobalt R3 comprada en Lake Barkley, Kentucky, para un cliente que la usar&aacute; finalmente en Puc&oacute;n. Es una importaci&oacute;n activa: ya fue seleccionada, validada y comprada; actualmente est&aacute; esperando cupo RoRo para salir a Chile y ser recibida en Puerto de San Antonio.</p>
+
+            <div class="case-specs">
+              <div class="case-spec"><span>Marca / modelo</span><b>Cobalt R3</b></div>
+              <div class="case-spec"><span>A&ntilde;o</span><b>2020</b></div>
+              <div class="case-spec"><span>Motor</span><b>Volvo Penta 380</b></div>
+              <div class="case-spec"><span>Horas al comprar</span><b>130 h</b></div>
+              <div class="case-spec"><span>Origen</span><b>Lake Barkley, Kentucky</b></div>
+              <div class="case-spec"><span>Destino final</span><b>Puc&oacute;n</b></div>
+              <div class="case-spec"><span>Recepci&oacute;n estimada</span><b>Puerto de San Antonio</b></div>
+              <div class="case-spec"><span>Estado</span><b>Pendiente cupo RoRo</b></div>
+            </div>
+
+            <ul class="process-list">
+              <li><span>1</span>Seleccionada seg&uacute;n el perfil del cliente: Cobalt R3 moderna, &uacute;nico due&ntilde;o y bajo uso.</li>
+              <li><span>2</span>Validaci&oacute;n de condiciones, equipamiento original, trailer, torre, carpa y horas de motor.</li>
+              <li><span>3</span>Compra asistida en Kentucky y preparaci&oacute;n para exportaci&oacute;n mar&iacute;tima RoRo.</li>
+              <li><span>4</span>Entrega proyectada en aproximadamente 90 d&iacute;as, con recepci&oacute;n en Puerto de San Antonio.</li>
+            </ul>
+
+            <div class="case-actions">
+              <a class="btn btn-primary" href="https://youtube.com/shorts/KaYq6mwSQBk" target="_blank" rel="noopener">Ver inspecci&oacute;n en video</a>
+              <a class="btn btn-dark" href="https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02" target="_blank" rel="noopener">Reservar asesor&iacute;a</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="real-case-card">
+          <div class="case-gallery" data-gallery>
+            <div class="case-photo main-photo">
+              <span class="badge">En proceso</span>
+              <img data-main-photo src="assets/Inspections/Cobalt-r3-2021/1.jpeg" alt="Cobalt R3 2021 en proceso de importaci&oacute;n desde New York a Chile">
+            </div>
+            <div class="thumbs thumbs-scroll" aria-label="Fotos Cobalt R3 2021">
+              <button type="button" class="is-active" data-photo="assets/Inspections/Cobalt-r3-2021/1.jpeg"><img src="assets/Inspections/Cobalt-r3-2021/1.jpeg" alt="Cobalt R3 2021 foto 1"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-r3-2021/2.jpeg"><img src="assets/Inspections/Cobalt-r3-2021/2.jpeg" alt="Cobalt R3 2021 foto 2"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-r3-2021/3.jpeg"><img src="assets/Inspections/Cobalt-r3-2021/3.jpeg" alt="Cobalt R3 2021 foto 3"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-r3-2021/4.jpeg"><img src="assets/Inspections/Cobalt-r3-2021/4.jpeg" alt="Cobalt R3 2021 foto 4"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-r3-2021/5.jpeg"><img src="assets/Inspections/Cobalt-r3-2021/5.jpeg" alt="Cobalt R3 2021 foto 5"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-r3-2021/6.jpeg"><img src="assets/Inspections/Cobalt-r3-2021/6.jpeg" alt="Cobalt R3 2021 foto 6"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-r3-2021/7.jpeg"><img src="assets/Inspections/Cobalt-r3-2021/7.jpeg" alt="Cobalt R3 2021 foto 7"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-r3-2021/8.jpeg"><img src="assets/Inspections/Cobalt-r3-2021/8.jpeg" alt="Cobalt R3 2021 foto 8"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-r3-2021/9.jpeg"><img src="assets/Inspections/Cobalt-r3-2021/9.jpeg" alt="Cobalt R3 2021 foto 9"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-r3-2021/10.jpeg"><img src="assets/Inspections/Cobalt-r3-2021/10.jpeg" alt="Cobalt R3 2021 foto 10"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-r3-2021/11.jpeg"><img src="assets/Inspections/Cobalt-r3-2021/11.jpeg" alt="Cobalt R3 2021 foto 11"></button>
+              <button type="button" data-photo="assets/Inspections/Cobalt-r3-2021/12.jpeg"><img src="assets/Inspections/Cobalt-r3-2021/12.jpeg" alt="Cobalt R3 2021 foto 12"></button>
+            </div>
+          </div>
+
+          <div class="case-body">
+            <div class="case-kicker">Importaci&oacute;n activa desde New York</div>
+            <h3>Cobalt R3 2021</h3>
+            <p>Lancha Cobalt R3 comprada en Mattituck, New York, para un cliente que la usar&aacute; en Puc&oacute;n. Se inspeccion&oacute; presencialmente, el cliente dio visto bueno, se realiz&oacute; el pago y actualmente est&aacute; esperando cupo RoRo para salir a Chile.</p>
+
+            <div class="case-specs">
+              <div class="case-spec"><span>Marca / modelo</span><b>Cobalt R3</b></div>
+              <div class="case-spec"><span>A&ntilde;o</span><b>2021</b></div>
+              <div class="case-spec"><span>Motor</span><b>Volvo Penta 300</b></div>
+              <div class="case-spec"><span>Horas al comprar</span><b>158 h</b></div>
+              <div class="case-spec"><span>Origen</span><b>Mattituck, New York</b></div>
+              <div class="case-spec"><span>Destino final</span><b>Puc&oacute;n</b></div>
+              <div class="case-spec"><span>Recepci&oacute;n estimada</span><b>Puerto de San Antonio</b></div>
+              <div class="case-spec"><span>Estado</span><b>Pendiente cupo RoRo</b></div>
+            </div>
+
+            <ul class="process-list">
+              <li><span>1</span>Inspecci&oacute;n presencial de la unidad en Mattituck, New York.</li>
+              <li><span>2</span>Validaci&oacute;n de condici&oacute;n, horas de uso y antecedentes con un solo due&ntilde;o.</li>
+              <li><span>3</span>Cliente dio visto bueno y se ejecut&oacute; la compra asistida.</li>
+              <li><span>4</span>Entrega proyectada en aproximadamente 90 d&iacute;as, con recepci&oacute;n en Puerto de San Antonio.</li>
+            </ul>
+
+            <div class="case-actions">
+              <a class="btn btn-primary" href="https://youtube.com/shorts/EOnLcnw_zak?feature=share" target="_blank" rel="noopener">Ver inspecci&oacute;n en video</a>
+              <a class="btn btn-dark" href="https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02" target="_blank" rel="noopener">Reservar asesor&iacute;a</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-pager" data-case-pager>
+          <button class="btn btn-outline" type="button" data-case-prev>Anterior</button>
+          <span class="case-page-status" data-case-status>1 / 1</span>
+          <button class="btn btn-dark" type="button" data-case-next>Siguiente</button>
         </div>
 
         <div class="case-grid legacy-case-grid">
@@ -1453,7 +1734,7 @@
               <article class="listing featured" data-category="lancha-premium" data-location="pucon" data-featured="true" data-status="disponible" data-price="78000000" data-year="2023">
                 <div class="gallery" data-gallery>
                   <div class="main-photo">
-                    <span class="badge">Destacada</span>
+                    <span class="badge">Consignación</span>
                     <img data-main-photo src="sea-ray-gallery/sea-ray-spx-190-2023-1.jpg" alt="Sea Ray SPX 190 2023 vista lateral">
                   </div>
                   <div class="thumbs" aria-label="Fotos Sea Ray SPX 190 2023">
@@ -1488,7 +1769,7 @@
                   </div>
                   <div class="side-actions">
                     <a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20Sea%20Ray%20SPX%20190%202023." target="_blank" rel="noopener">Consultar</a>
-                    <a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoría</a>
+                    <a class="btn btn-dark" href="https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02" target="_blank" rel="noopener">Asesoría</a>
                   </div>
                 </div>
               </article>
@@ -1496,7 +1777,7 @@
               <article class="listing featured" data-category="lancha-premium" data-location="pucon" data-featured="true" data-status="disponible" data-price="90000000" data-year="2015">
                 <div class="gallery" data-gallery>
                   <div class="main-photo">
-                    <span class="badge">Destacada</span>
+                    <span class="badge">Consignación</span>
                     <img data-main-photo src="assets/boats/Cobalt-r5-2015/1.jpeg" alt="Cobalt R5 2015 vista principal completa">
                   </div>
                   <div class="thumbs thumbs-scroll" aria-label="Fotos Cobalt R5 2015">
@@ -1554,13 +1835,13 @@
                   </div>
                 </div>
                 <div class="listing-main"><div class="meta-line"><span class="tag">Lancha Premium</span><span class="tag">385 horas</span></div><h3>Cobalt R5 2015</h3><p>Embarcación premium con terminaciones de lujo, Garmin integrado, carro incluido y uso exclusivo en agua dulce.</p><div class="specs"><div class="spec"><span>Motor</span><b>Volvo Penta V8 300 HP</b></div><div class="spec"><span>Año</span><b>2015</b></div><div class="spec"><span>Estado</span><b>Disponible</b></div></div></div>
-                <div class="listing-side"><div><div class="price">$90.000.000 <small>CLP</small></div><div class="location">Pucón, Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Cobalt%20R5%202015." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoría</a></div></div>
+                <div class="listing-side"><div><div class="price">$90.000.000 <small>CLP</small></div><div class="location">Pucón, Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Cobalt%20R5%202015." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02" target="_blank" rel="noopener">Asesoría</a></div></div>
               </article>
 
               <article class="listing featured" data-category="wake-surf" data-location="chile" data-featured="true" data-status="disponible" data-price="85000000" data-year="2013">
                 <div class="gallery" data-gallery>
                   <div class="main-photo">
-                    <span class="badge">Destacada</span>
+                    <span class="badge">Consignación</span>
                     <img data-main-photo src="assets/boats/Mastercraft-xstar-2013/1.jpeg" alt="MasterCraft X-Star 2013 vista principal completa">
                   </div>
                   <div class="thumbs thumbs-scroll" aria-label="Fotos MasterCraft X-Star 2013">
@@ -1597,13 +1878,13 @@
                   </div>
                 </div>
                 <div class="listing-main"><div class="meta-line"><span class="tag">Wake & Surf Boat</span><span class="tag">283 horas</span></div><h3>MasterCraft X-Star 2013</h3><p>Wake boat profesional con ballast, sistema surf y carro original MasterCraft.</p><div class="specs"><div class="spec"><span>Motor</span><b>ILMOR 7.4L V8</b></div><div class="spec"><span>Año</span><b>2013</b></div><div class="spec"><span>Estado</span><b>Disponible</b></div></div></div>
-                <div class="listing-side"><div><div class="price">$85.000.000 <small>CLP</small></div><div class="location">Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20MasterCraft%20X-Star%202013." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoría</a></div></div>
+                <div class="listing-side"><div><div class="price">$85.000.000 <small>CLP</small></div><div class="location">Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20MasterCraft%20X-Star%202013." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02" target="_blank" rel="noopener">Asesoría</a></div></div>
               </article>
 
               <article class="listing featured" data-category="lancha-premium" data-location="chillan" data-featured="true" data-status="disponible" data-price="70000000" data-year="2014">
                 <div class="gallery" data-gallery>
                   <div class="main-photo">
-                    <span class="badge">Destacada</span>
+                    <span class="badge">Consignación</span>
                     <img data-main-photo src="assets/boats/Regal-24-fasdeck-2014/1.jpeg" alt="Regal FasDeck 24 2014 vista principal completa">
                   </div>
                   <div class="thumbs thumbs-scroll" aria-label="Fotos Regal FasDeck 24 2014">
@@ -1646,7 +1927,7 @@
                   </div>
                 </div>
                 <div class="listing-main"><div class="meta-line"><span class="tag">Lancha Premium</span><span class="tag">340 horas</span></div><h3>Regal FasDeck 24 2014</h3><p>Full equip con baño, lavamanos, lavapiés, Power Tower y carro doble eje.</p><div class="specs"><div class="spec"><span>Motor</span><b>Volvo Penta 5.7 V8 300 HP DPS</b></div><div class="spec"><span>Año</span><b>2014</b></div><div class="spec"><span>Estado</span><b>Disponible</b></div></div></div>
-                <div class="listing-side"><div><div class="price">$70.000.000 <small>CLP</small></div><div class="location">Chillán, Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Regal%20FasDeck%2024%202014." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoría</a></div></div>
+                <div class="listing-side"><div><div class="price">$70.000.000 <small>CLP</small></div><div class="location">Chillán, Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Regal%20FasDeck%2024%202014." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02" target="_blank" rel="noopener">Asesoría</a></div></div>
               </article>
 
               <article class="listing" data-category="lancha-familiar" data-location="chillan" data-featured="false" data-status="disponible" data-price="65000000" data-year="2013">
@@ -1713,7 +1994,7 @@
                   </div>
                 </div>
                 <div class="listing-main"><div class="meta-line"><span class="tag">Lancha Familiar</span><span class="tag">350 horas</span></div><h3>Regal FasDeck 24 2013</h3><p>Deck boat amplia para familia y deportes acuáticos. Bravo 3 doble hélice.</p><div class="specs"><div class="spec"><span>Motor</span><b>MerCruiser 350 MAG V8 Bravo 3</b></div><div class="spec"><span>Año</span><b>2013</b></div><div class="spec"><span>Estado</span><b>Disponible</b></div></div></div>
-                <div class="listing-side"><div><div class="price">$65.000.000 <small>CLP</small></div><div class="location">Chillán, Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Regal%20FasDeck%2024%202013." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoría</a></div></div>
+                <div class="listing-side"><div><div class="price">$65.000.000 <small>CLP</small></div><div class="location">Chillán, Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Regal%20FasDeck%2024%202013." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02" target="_blank" rel="noopener">Asesoría</a></div></div>
               </article>
 
               <article class="listing" data-category="lancha-familiar" data-location="rapel" data-featured="false" data-status="disponible" data-price="45000000" data-year="2017">
@@ -1777,7 +2058,7 @@
                   </div>
                 </div>
                 <div class="listing-main"><div class="meta-line"><span class="tag">Lancha Familiar</span><span class="tag">170 horas</span></div><h3>Regal 2000 2017</h3><p>Torre eléctrica, casco FasTrac y solo 170 horas.</p><div class="specs"><div class="spec"><span>Motor</span><b>Volvo Penta 5.0 V8</b></div><div class="spec"><span>Año</span><b>2017</b></div><div class="spec"><span>Estado</span><b>Disponible</b></div></div></div>
-                <div class="listing-side"><div><div class="price">$45.000.000 <small>CLP</small></div><div class="location">Rapel, Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Regal%202000%202017." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoría</a></div></div>
+                <div class="listing-side"><div><div class="price">$45.000.000 <small>CLP</small></div><div class="location">Rapel, Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Regal%202000%202017." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02" target="_blank" rel="noopener">Asesoría</a></div></div>
               </article>
 
               <article class="listing" data-category="lancha-premium" data-location="rapel" data-featured="false" data-status="disponible" data-price="45000000" data-year="2007">
@@ -1808,7 +2089,7 @@
                   </div>
                 </div>
                 <div class="listing-main"><div class="meta-line"><span class="tag">Lancha Premium</span><span class="tag">600 horas</span></div><h3>Cobalt 200 2007</h3><p>Cobalt premium con casco Deep-V y torre wake.</p><div class="specs"><div class="spec"><span>Motor</span><b>MerCruiser 5.0 MPI V8</b></div><div class="spec"><span>Año</span><b>2007</b></div><div class="spec"><span>Estado</span><b>Disponible</b></div></div></div>
-                <div class="listing-side"><div><div class="price">$45.000.000 <small>CLP</small></div><div class="location">Rapel, Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Cobalt%20200%202007." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoría</a></div></div>
+                <div class="listing-side"><div><div class="price">$45.000.000 <small>CLP</small></div><div class="location">Rapel, Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Cobalt%20200%202007." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02" target="_blank" rel="noopener">Asesoría</a></div></div>
               </article>
 
               <article class="listing" data-category="lancha-familiar" data-location="chile" data-featured="false" data-status="disponible" data-price="35000000" data-year="2012">
@@ -1872,7 +2153,7 @@
                   </div>
                 </div>
                 <div class="listing-main"><div class="meta-line"><span class="tag">Lancha Familiar</span><span class="tag">250 horas</span></div><h3>Sea Ray Sport 205 2012</h3><p>Torre original Sea Ray, carro original y excelente estado general.</p><div class="specs"><div class="spec"><span>Motor</span><b>MerCruiser 4.3 MPI</b></div><div class="spec"><span>Año</span><b>2012</b></div><div class="spec"><span>Estado</span><b>Disponible</b></div></div></div>
-                <div class="listing-side"><div><div class="price">$35.000.000 <small>CLP</small></div><div class="location">Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Sea%20Ray%20Sport%20205%202012." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Asesoría</a></div></div>
+                <div class="listing-side"><div><div class="price">$35.000.000 <small>CLP</small></div><div class="location">Chile</div></div><div class="side-actions"><a class="btn btn-teal" href="https://wa.me/56931054089?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Sea%20Ray%20Sport%20205%202012." target="_blank" rel="noopener">Consultar</a><a class="btn btn-dark" href="https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02" target="_blank" rel="noopener">Asesoría</a></div></div>
               </article>
             </div>
             <div class="empty-state" data-empty-state>No hay embarcaciones que coincidan con esos filtros. Ajusta la búsqueda o escribe por WhatsApp para buscar una alternativa en Estados Unidos.</div>
@@ -1885,14 +2166,24 @@
       <div class="wrap advisor-box">
         <div>
           <h2>¿Quieres importar una embarcación desde Estados Unidos?</h2>
-          <p>Agenda una asesoría antes de avanzar con una reserva, inspección o transferencia internacional. Evitamos errores costosos mediante búsqueda, validación y compra asistida.</p>
+          <p>Agenda una asesoría antes de avanzar con una reserva, inspección o transferencia internacional. Evitamos errores costosos mediante búsqueda, validación y compra asistida. Después del pago podrás elegir tu horario disponible en Google Calendar.</p>
         </div>
-        <a class="btn btn-primary" href="https://buy.stripe.com/7sYaEXcQGfjlbHQ0Fddby00" target="_blank" rel="noopener">Reservar Asesoría General</a>
+        <a class="btn btn-primary" href="https://buy.stripe.com/eVq9AT03U1sv7rAcnVdby02" target="_blank" rel="noopener">Reservar Asesoría General</a>
       </div>
     </section>
   </main>
 
-  <footer class="wrap">Alto Muelle Marine · Búsqueda, compra asistida e importación de embarcaciones desde Estados Unidos a Chile</footer>
+  <footer class="wrap">
+    <div class="footer-brand">
+      <img src="assets/Logo alto muelle/alto-muelle-logo-cropped.png" alt="Alto Muelle Marine">
+      <span>Alto Muelle Marine · Búsqueda, compra asistida e importación de embarcaciones desde Estados Unidos a Chile</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/altomuellemarine/" target="_blank" rel="noopener">Instagram @altomuellemarine</a>
+      <a href="mailto:info@conchaexport.com">info@conchaexport.com</a>
+      <span>Maipón 100, Chillán, Chile</span>
+    </div>
+  </footer>
 
   <div class="lightbox" data-lightbox aria-hidden="true">
     <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Galería de fotos">
@@ -1924,9 +2215,42 @@
     const lightboxClose = document.querySelector('[data-lightbox-close]');
     const lightboxPrev = document.querySelector('[data-lightbox-prev]');
     const lightboxNext = document.querySelector('[data-lightbox-next]');
+    const caseCards = Array.from(document.querySelectorAll('#casos .real-case-card'));
+    const casePager = document.querySelector('[data-case-pager]');
+    const casePrev = document.querySelector('[data-case-prev]');
+    const caseNext = document.querySelector('[data-case-next]');
+    const caseStatus = document.querySelector('[data-case-status]');
+    const CASES_PER_PAGE = 3;
+    let casePage = 0;
     let activePhotos = [];
     let activeIndex = 0;
     let activeTitle = '';
+
+    const renderCasePage = () => {
+      const totalPages = Math.max(1, Math.ceil(caseCards.length / CASES_PER_PAGE));
+      casePage = Math.min(Math.max(casePage, 0), totalPages - 1);
+
+      caseCards.forEach((card, index) => {
+        const startsAt = casePage * CASES_PER_PAGE;
+        const endsBefore = startsAt + CASES_PER_PAGE;
+        card.classList.toggle('is-hidden', index < startsAt || index >= endsBefore);
+      });
+
+      casePager?.classList.toggle('is-visible', caseCards.length > CASES_PER_PAGE);
+      if (caseStatus) caseStatus.textContent = `${casePage + 1} / ${totalPages}`;
+      if (casePrev) casePrev.disabled = casePage === 0;
+      if (caseNext) caseNext.disabled = casePage >= totalPages - 1;
+    };
+
+    casePrev?.addEventListener('click', () => {
+      casePage -= 1;
+      renderCasePage();
+    });
+
+    caseNext?.addEventListener('click', () => {
+      casePage += 1;
+      renderCasePage();
+    });
 
     const showLightboxPhoto = () => {
       if (!activePhotos.length || !lightboxImage) return;
@@ -2048,6 +2372,7 @@
     });
 
     sortListings();
+    renderCasePage();
     applyFilters();
   </script>
 </body>
