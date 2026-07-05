@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="es-CL">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RSHV535FQX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RSHV535FQX');
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Política de Privacidad | Alto Muelle Marine</title>
@@ -160,5 +168,39 @@
       </div>
     </div>
   </footer>
+  <script>
+    document.addEventListener('click', function(event) {
+      var link = event.target.closest('a');
+      if (!link || typeof gtag !== 'function') return;
+
+      var href = link.getAttribute('href') || '';
+      var text = (link.textContent || '').trim().slice(0, 120);
+      var eventName = '';
+      var params = {
+        link_url: link.href || href,
+        link_text: text,
+        page_path: window.location.pathname
+      };
+
+      if (href.indexOf('buy.stripe.com') !== -1) {
+        eventName = href.indexOf('5kQ8wP3g61sv5jsafNdby01') !== -1 ? 'click_busqueda_personalizada' : 'click_asesoria_general';
+        params.payment_platform = 'stripe';
+      } else if (href.indexOf('wa.me/') !== -1) {
+        eventName = 'click_whatsapp';
+      } else if (href.indexOf('instagram.com/altomuellemarine') !== -1) {
+        eventName = 'click_instagram';
+      } else if (href === '#inventario' || href.indexOf('/#inventario') !== -1) {
+        eventName = 'click_inventario';
+      } else if (href === '#casos' || href.indexOf('/#casos') !== -1) {
+        eventName = 'click_casos_reales';
+      } else if (href.indexOf('/privacy/') !== -1 || href.indexOf('/terms/') !== -1 || href.indexOf('/data-deletion/') !== -1) {
+        eventName = 'click_pagina_legal';
+      }
+
+      if (eventName) {
+        gtag('event', eventName, params);
+      }
+    });
+  </script>
 </body>
 </html>
