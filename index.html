@@ -1113,6 +1113,26 @@
       font-size: 13px;
     }
 
+    .btn-share {
+      justify-content: center;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--navy);
+      cursor: pointer;
+    }
+
+    .btn-share:hover,
+    .btn-share:focus-visible {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    .listing.is-shared-target {
+      scroll-margin-top: 96px;
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(15, 154, 154, .14), 0 18px 34px rgba(7, 24, 36, .10);
+    }
+
     .advisor-band {
       background: var(--navy);
       color: #fff;
@@ -2569,6 +2589,98 @@
       if (event.key === 'ArrowRight') moveLightbox(1);
     });
 
+    const createListingSlug = (title) => title
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '');
+
+    const getListingShareUrl = (listing) => {
+      const url = new URL(`${window.location.origin}${window.location.pathname}`);
+      url.searchParams.set('lancha', listing.dataset.shareSlug);
+      url.hash = listing.id;
+      return url.toString();
+    };
+
+    const copyListingUrl = async (url) => {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(url);
+        return;
+      }
+
+      const textarea = document.createElement('textarea');
+      textarea.value = url;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      textarea.remove();
+    };
+
+    listings.forEach((listing) => {
+      const title = listing.querySelector('h3')?.textContent?.trim() || 'Embarcación disponible';
+      const slug = listing.dataset.shareSlug || createListingSlug(title);
+      const actions = listing.querySelector('.side-actions');
+      if (!slug || !actions) return;
+
+      listing.dataset.shareSlug = slug;
+      listing.id = `lancha-${slug}`;
+
+      const shareButton = document.createElement('button');
+      shareButton.type = 'button';
+      shareButton.className = 'btn btn-share';
+      shareButton.textContent = 'Compartir ficha';
+      shareButton.setAttribute('aria-label', `Compartir ficha de ${title}`);
+
+      shareButton.addEventListener('click', async () => {
+        const url = getListingShareUrl(listing);
+        const shareData = {
+          title: `${title} | Alto Muelle Marine`,
+          text: `Mira esta embarcación disponible en Alto Muelle Marine: ${title}.`,
+          url
+        };
+
+        try {
+          if (navigator.share) {
+            await navigator.share(shareData);
+          } else {
+            await copyListingUrl(url);
+            shareButton.textContent = 'Link copiado';
+            window.setTimeout(() => { shareButton.textContent = 'Compartir ficha'; }, 2200);
+          }
+
+          if (typeof gtag === 'function') {
+            gtag('event', 'share_inventario', {
+              vessel_name: title,
+              share_url: url,
+              page_path: window.location.pathname
+            });
+          }
+        } catch (error) {
+          if (error?.name !== 'AbortError') {
+            shareButton.textContent = 'No se pudo compartir';
+            window.setTimeout(() => { shareButton.textContent = 'Compartir ficha'; }, 2200);
+          }
+        }
+      });
+
+      actions.appendChild(shareButton);
+    });
+
+    const sharedListingSlug = new URLSearchParams(window.location.search).get('lancha');
+    if (sharedListingSlug) {
+      const sharedListing = listings.find((listing) => listing.dataset.shareSlug === sharedListingSlug);
+      if (sharedListing) {
+        sharedListing.classList.add('is-shared-target');
+        window.setTimeout(() => {
+          sharedListing.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 120);
+      }
+    }
+
     const getSelected = (name) => filters
       .filter((input) => input.dataset.filter === name && input.checked)
       .map((input) => input.value);
@@ -2588,7 +2700,8 @@
         if (sortSelect.value === 'year-desc') {
           return Number(b.dataset.year) - Number(a.dataset.year);
         }
-        return Number(b.dataset.featured === 'true') - Number(a.dataset.featured === 'true')
+        return Number(b.dataset.priority || 0) - Number(a.dataset.priority || 0)
+          || Number(b.dataset.featured === 'true') - Number(a.dataset.featured === 'true')
           || Number(b.dataset.year) - Number(a.dataset.year);
       });
 
